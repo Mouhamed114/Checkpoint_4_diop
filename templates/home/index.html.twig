@@ -3,13 +3,29 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <div class="pink-stripe">
-        <h1>
-            Let's start coding&nbsp;&#129304;
-        </h1>
+     
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Première colonne -->
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+                <div class="row mb-3">
+                    <div class="col text-center">
+                        Welcome!
+                    </div>
+                </div>
+                {# <hr class="h-auto border border-accentcolor mx-auto my-5 d-none d-sm-block"> #}
+                <div class="row">
+                    <div class="col">
+                        <p>ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu eu venenatis consectetur. Aliquam volutpat, nibh ac pulvinar aliquet, tellus sem scelerisque justo, vitae consequat lorem dolor at justo. Fusce vel felis sit amet nisl tincidunt congue vitae non lorem. Quisque et tortor ultrices, cursus nunc id, finibus mauris. Sed maximus, elit id malesuada tincidunt, felis velit hendrerit velit, in tristique urna diam nec ex. Sed eget posuere lacus. Sed hendrerit, justo at</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Deuxième colonne -->
+            <div class="col-md-8">
+                <img src="{{ asset('build/images/dev.webp') }}" class="img-fluid">
+            </div>
+        </div>
     </div>
-    <div class="white-stripe">
-        <img src="{{ asset('build/images/LOGO_WILD_CODE_SCHOOL.png') }}"
-             alt="">
-    </div>
+        
 {% endblock %}

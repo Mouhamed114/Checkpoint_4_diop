@@ -1,2 +1,38 @@
 //start coding by removing this file and adding yours ;)
 @import "wcs";
+
+@import "~bootstrap/scss/bootstrap";
+
+// .vertical-line {
+//     width: 2px;
+//     background-color: #000;
+//     position: relative;
+//     margin: 0 auto;
+//     height: 150px;
+// }   
+
+// .circle {
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     background-color: #000;
+//     // position: absolute;
+//     bottom: 150px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     padding: 1em;
+//     margin-bottom: 17rem;
+// }
+
+.custom-container-about{
+    padding-left: 7em !important;
+    padding-right: 7em !important;
+}
+
+
+// .project-card {
+//     background-size: cover;
+//     background-position: center;
+//     padding: 1.5rem;
+// }
+

@@ -1,0 +1,26 @@
+        /* Style pour cacher le contenu de toutes les cartes par défaut */
+        .card-text,
+        .card-title,
+        .list-inline-item {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s;
+        }
+
+        /* Style pour afficher le contenu de la carte et zoomer au survol */
+        .custom-card:hover .card-text,
+        .custom-card:hover .card-title,
+        .custom-card:hover .list-inline-item {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Style pour le zoom au survol */
+        .custom-card:hover {
+            transform: scale(1.05); /* Modifiez la valeur pour ajuster l'effet de zoom */
+            z-index: 1; /* Permet de mettre la carte survolée au-dessus des autres */
+        }
+
+        .custom-card {
+            transition: transform 0.3s; /* Ajouter une transition pour une animation fluide */
+        }
