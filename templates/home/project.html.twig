@@ -13,20 +13,25 @@
       {% endblock %}
 
 {% block body %}
-    <main class="mb-auto">
+    <main class="mb-auto project">
+        <div class="container mt-4">
+            <div class="d-flex align-items-start justify-content-center">
+                <h1 class="custom-title">Project</h1>
+            </div>
+        </div>
         <div class="container mt-5">
             <div class="row">
-                {% for i in 1..6 %}
+                {% for project in projects %}
                     <div class="col-md-6 mb-4">
-                        <div class="card h-100 d-flex flex-column custom-card" style="background-image: url('https://media.istockphoto.com/id/1067347086/fr/photo/chat-aux-yeux-bleus-se-penche-sur-lappareil-photo.jpg?s=612x612&w=0&k=20&c=BJqJ6BYWFo4xT1TVDu8fmg5_z7L1ZwgYnC2M6VCwOWY=');">
-                            <div class="card-body flex-fill">
+                        <div class="card h-100 d-flex flex-column custom-card" style="background-image: url('{{ asset(project.imageHomePage()) }}')">
+                            <div class="card-body  flex-fill">
                                 <div class="mt-auto">
-                                    <h3 class="card-title">Project {{ i }}</h3>
-                                    <p class="card-text">Description du projet {{ i }}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h3 class="card-title">{{ project.name}} </h3>
+                                    <p class="card-text">{{ project.description}} </p>
                                     <ul class="list-inline">
-                                        <li class="list-inline-item">Techno A</li>
-                                        <li class="list-inline-item">Techno B</li>
-                                        <li class="list-inline-item">Techno C</li>
+                                        {% for techno in project.getTechnos() %}
+                                            <li class="list-inline-item">{{ techno.getName() }}</li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>

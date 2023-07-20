@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\ProjectService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,8 +22,18 @@ class HomeController extends AbstractController
     }
 
     #[Route('/project', name: 'app_project')]
-    public function project(): Response
+    public function project(ProjectService $projectService): Response
     {
-        return $this->render('home/project.html.twig');
+        $projects = $projectService->findAllWithTechnos();
+        // dd($projects);
+        return $this->render('home/project.html.twig', [
+            'projects' => $projects,
+        ]);
+    }
+
+    #[Route('/contact', name: 'app_contact')]
+    public function contact(): Response
+    {
+        return $this->render('home/contact.html.twig');
     }
 }
