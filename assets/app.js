@@ -12,3 +12,20 @@ import './styles/app.scss';
 import 'bootstrap';
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById("animationText");
+    const text = "Welcome!";
+    let index = 0;
+
+    function typeWriter() {
+        textElement.textContent += text.charAt(index);
+        index++;
+        if (index < text.length) {
+            setTimeout(typeWriter, 100);
+        }
+    }
+
+    typeWriter();
+});
+
+

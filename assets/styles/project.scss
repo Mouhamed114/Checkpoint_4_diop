@@ -1,4 +1,4 @@
-        /* Style pour cacher le contenu de toutes les cartes par défaut */
+
         .card-text,
         .card-title,
         .list-inline-item {
@@ -7,7 +7,7 @@
             transition: visibility 0s, opacity 0.3s;
         }
 
-        /* Style pour afficher le contenu de la carte et zoomer au survol */
+       
         .custom-card:hover .card-text,
         .custom-card:hover .card-title,
         .custom-card:hover .list-inline-item {
@@ -15,14 +15,14 @@
             opacity: 1;
         }
 
-        /* Style pour le zoom au survol */
+       
         .custom-card:hover {
-            transform: scale(1.05); /* Modifiez la valeur pour ajuster l'effet de zoom */
-            z-index: 1; /* Permet de mettre la carte survolée au-dessus des autres */
+            transform: scale(1.05); 
+            z-index: 1; 
         }
 
         .custom-card {
-            transition: transform 0.3s; /* Ajouter une transition pour une animation fluide */
+            transition: transform 0.3s;
         }
 
         .card.h-100.d-flex.flex-column.custom-card {
@@ -55,4 +55,14 @@
         .custom-title{
             font-size: 36px;
             font-family: 'Kavoon';
+        }
+        .technos{
+            background: rgb(105, 104, 105);
+            padding: 4px 10px;
+            border-radius: 50px;
+            text-transform: capitalize;
+            font-size: 13px;
+            margin-right: 6px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
         }

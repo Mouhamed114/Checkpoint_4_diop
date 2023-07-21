@@ -47,7 +47,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         }
 
         $imagePaths = [
-            'image1' => 'uploads/images/gif.gif',
+            'image1' => 'uploads/images/imgproject-1.gif',
             'image2' => 'uploads/images/imgproject-2.png',
             'image3' => 'uploads/images/imgproject-3.png',
             'image4' => 'uploads/images/imgproject-4.gif',
@@ -58,7 +58,9 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         for ($i = 1; $i <= 6; $i++) {
             $project = new Project();
             $project->setName("Projet $i");
-            $project->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis ipsum sed eleifend consequat. Fusce tincidunt quam eget tellus vestibulum, ac fermentum enim tristique. Integer et tincidunt nunc.");
+            $project->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Maecenas venenatis ipsum sed eleifend consequat. Fusce tincidunt quam eget tellus vestibulum,
+              ac fermentum enim tristique. Integer et tincidunt nunc.");
             $project->setLinkGithub("https://github.com/projet$i");
             $project->setLinkInternet("https://projet$i.example.com");
             $project->setImageHomePage($imagePaths["image$i"]);

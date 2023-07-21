@@ -21,11 +21,10 @@ class HomeController extends AbstractController
         return $this->render('home/about.html.twig');
     }
 
-    #[Route('/project', name: 'app_project')]
+    #[Route('/projects', name: 'app_project')]
     public function project(ProjectService $projectService): Response
     {
         $projects = $projectService->findAllWithTechnos();
-        // dd($projects);
         return $this->render('home/project.html.twig', [
             'projects' => $projects,
         ]);

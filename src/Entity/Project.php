@@ -105,7 +105,7 @@ class Project
     }
 
     /**
-     * @return Collection<int, technos>
+     * @return Collection<int, Technos>
      */
     public function getTechnos(): Collection
     {
