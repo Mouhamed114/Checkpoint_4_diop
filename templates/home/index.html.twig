@@ -3,13 +3,29 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <div class="pink-stripe">
-        <h1>
-            Let's start coding&nbsp;&#129304;
-        </h1>
+     
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+                <div class="row mb-3">
+                    <div class="col custom-title text-center" id="animationText">
+                        
+                    </div>
+                </div>
+                 
+                <div class="row">
+                    <div class="col custom-presentation">
+                        <p class="text-justify text-home">Welcome to my portfolio ! I'm a passionate fullstack developer. </p>
+                        <p class="custom-border text-justify text-home">My goal is to paint the canvas of the internet with exciting projects and lines of code, turning zeros and ones into immersive and interactive web experiences. When I'm not creating beautiful web experiences, you can find me reading articles about web development or being carried away by the captivating melodies of music.
+                            Explore my portfolio to discover my web projects and experiences. </p>
+                        <p class="text-justify text-home">Don't hesitate to contact me if you'd like to know more about my work or to discuss exciting collaborations. Thank you for visiting!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <img src="{{ asset('build/images/dev.webp') }}" class="img-fluid">
+            </div>
+        </div>
     </div>
-    <div class="white-stripe">
-        <img src="{{ asset('build/images/LOGO_WILD_CODE_SCHOOL.png') }}"
-             alt="">
-    </div>
+        
 {% endblock %}
