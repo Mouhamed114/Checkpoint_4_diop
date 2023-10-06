@@ -61,8 +61,63 @@
             padding: 4px 10px;
             border-radius: 50px;
             text-transform: capitalize;
-            font-size: 13px;
+            font-size: 16px;
             margin-right: 6px;
             color: rgb(255, 255, 255);
             font-weight: 500;
+        }
+
+        .sidebar-project{
+            background-color: #020a13;
+            width: 37rem !important;
+            color: white;
+        }
+        .img-sidebar{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .btn-close{
+            width: auto;
+            font-weight: 900;
+            font-size: 0,875em;
+            color: #3f566e;
+        }
+        hr{
+            margin-top: -14px;
+        }
+        .list-inline-sidebar{
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .website-sidebar{
+            font-size: 1,124em;
+        }
+        .website, .github{
+            text-decoration: none;
+            font-weight: 800;
+            color: #3f566e;
+        }
+        .svg-sidebar{
+            margin-right: 14px;
+            height: auto;
+            width: 22px;
+            padding-bottom: 9px;
+        }
+        .h3-sidebar{
+            margin-bottom: 15px !important;
+        }
+        .technos-sidebar, .website-sidebar{
+            margin-bottom: 3em;
+        }
+        .techno-sidebar{
+            background-color: #13283e;
+            padding: 6px 21px;
+            border-radius: 4px;
+            text-transform: capitalize;
+            font-size: 15px;
+            margin-right: 10px;
+            color: #e1e1e1;
+            font-weight: bold;
         }

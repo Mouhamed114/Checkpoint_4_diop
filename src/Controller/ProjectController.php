@@ -24,7 +24,7 @@ class ProjectController extends AbstractController
         ]);
     }
 
-   
+
     #[Route('/new', name: 'app_project_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger): Response
     {
@@ -36,15 +36,16 @@ class ProjectController extends AbstractController
             $imageFile = $form->get('imageHomePage')->getData();
             if ($imageFile) {
                 $originalImageName = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeImageName = 'uploads/images/' . $slugger->slug($originalImageName).'.'.$imageFile->guessExtension();
-            
+                $safeImageName = 'uploads/images/' .
+                $slugger->slug($originalImageName) . '.' . $imageFile->guessExtension();
+
                 try {
                     $imageFile->move(
                         $this->getParameter('images_directory'),
                         $safeImageName
                     );
 
-                    
+
                     $project->setImageHomePage($safeImageName);
                 } catch (FileException $e) {
                     die("Erreur!");
@@ -71,8 +72,12 @@ class ProjectController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_project_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Project $project, EntityManagerInterface $entityManager, SluggerInterface $slugger): Response
-    {
+    public function edit(
+        Request $request,
+        Project $project,
+        EntityManagerInterface $entityManager,
+        SluggerInterface $slugger
+    ): Response {
         $form = $this->createForm(ProjectType::class, $project);
         $form->handleRequest($request);
 
@@ -80,15 +85,16 @@ class ProjectController extends AbstractController
             $imageFile = $form->get('imageHomePage')->getData();
             if ($imageFile) {
                 $originalImageName = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeImageName = 'uploads/images/' .$slugger->slug($originalImageName).'.'.$imageFile->guessExtension();
+                $safeImageName = 'uploads/images/' .
+                 $slugger->slug($originalImageName) . '.' . $imageFile->guessExtension();
 
                 try {
                     $imageFile->move(
-                        $this->getParameter('images_directory'), 
+                        $this->getParameter('images_directory'),
                         $safeImageName
                     );
 
-                 
+
                     $project->setImageHomePage($safeImageName);
                 } catch (FileException $e) {
                     die("Erreur!");
@@ -109,7 +115,7 @@ class ProjectController extends AbstractController
     #[Route('/{id}', name: 'app_project_delete', methods: ['POST'])]
     public function delete(Request $request, Project $project, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$project->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $project->getId(), $request->request->get('_token'))) {
             $entityManager->remove($project);
             $entityManager->flush();
         }

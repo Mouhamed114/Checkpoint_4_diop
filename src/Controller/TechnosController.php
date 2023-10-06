@@ -71,7 +71,7 @@ class TechnosController extends AbstractController
     #[Route('/{id}', name: 'app_technos_delete', methods: ['POST'])]
     public function delete(Request $request, Technos $techno, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$techno->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $techno->getId(), $request->request->get('_token'))) {
             $entityManager->remove($techno);
             $entityManager->flush();
         }

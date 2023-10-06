@@ -1,44 +1,88 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Project{% endblock %}
+{% block title %}Project
+{% endblock %}
 
-    {% block stylesheets %}
-        {{ parent()}}
-        {{ encore_entry_link_tags('project') }}
-      {% endblock %}
-      
-      {% block javascripts %}
-          {{ parent()}}
-        {{ encore_entry_script_tags('project') }}
-      {% endblock %}
+{% block stylesheets %}
+	{{ parent()}}
+	{{ encore_entry_link_tags('project') }}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent()}}
+	{{ encore_entry_script_tags('project') }}
+{% endblock %}
 
 {% block body %}
-    <main class="mb-auto project">
-        <div class="container mt-4">
-            <div class="d-flex align-items-start justify-content-center">
-                <h1 class="custom-title">Project</h1>
-            </div>
-        </div>
-        <div class="container mt-5">
-            <div class="row">
-                {% for project in projects %}
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100 d-flex flex-column custom-card" style="background-image: url('{{ asset(project.imageHomePage()) }}')">
-                            <div class="card-body  flex-fill">
-                                <div class="mt-auto">
-                                    <h3 class="card-title">{{ project.name}} </h3>
-                                    <p class="card-text text-justify">{{ project.description}} </p>
-                                    <ul class="list-inline">
-                                        {% for techno in project.Technos() %}
-                                            <li class="technos list-inline-item">{{ techno.name() }}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </main>
+	<main class="mb-auto project">
+		<div class="container mt-4">
+			<div class="d-flex align-items-start justify-content-center">
+				<h1 class="custom-title">Project</h1>
+			</div>
+		</div>
+		<div class="container mt-5">
+			<div class="row">
+				{% for project in projects %}
+					<div class="col-md-6 mb-4 project-card" data-bs-toggle="offcanvas" data-bs-target="#sidebar-{{ project.id }}" aria-controls="sidebar-{{ project.id }}">
+						<div class="card h-100 d-flex flex-column custom-card rounded-3" style="background-image: url('{{ asset(project.imageHomePage()) }}')">
+							<div class="card-body  flex-fill">
+								<div class="mt-auto">
+									<h3 class="card-title">{{ project.name}}
+									</h3>
+									<p class="card-text text-justify">{{ project.description}}
+									</p>
+									<ul class="list-inline">
+										{% for techno in project.Technos() %}
+											<li class="technos list-inline-item">{{ techno.name() }}</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="sidebar-project offcanvas offcanvas-end" tabindex="-1" id="sidebar-{{ project.id }}" aria-labelledby="sidebarLabel-{{ project.id }}">
+						<div class="offcanvas-header">
+							<button type="button" class=" text-white btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fermer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#8F9BB3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.0055 7.835L10.1255 11.715L14.0055 15.595C14.098 15.6876 14.1715 15.7975 14.2216 15.9185C14.2717 16.0394 14.2975 16.1691 14.2975 16.3C14.2975 16.4309 14.2717 16.5606 14.2216 16.6815C14.1715 16.8025 14.098 16.9124 14.0055 17.005C13.9129 17.0976 13.803 17.171 13.682 17.2211C13.561 17.2712 13.4314 17.297 13.3005 17.297C13.1695 17.297 13.0399 17.2712 12.9189 17.2211C12.798 17.171 12.688 17.0976 12.5955 17.005L8.00546 12.415C7.91276 12.3225 7.83921 12.2126 7.78903 12.0916C7.73885 11.9707 7.71302 11.841 7.71302 11.71C7.71302 11.579 7.73885 11.4494 7.78903 11.3284C7.83921 11.2074 7.91276 11.0975 8.00546 11.005L12.5955 6.415C12.688 6.3223 12.7979 6.24875 12.9188 6.19857C13.0398 6.14839 13.1695 6.12256 13.3005 6.12256C13.4314 6.12256 13.5611 6.14839 13.6821 6.19857C13.8031 6.24875 13.913 6.3223 14.0055 6.415C14.3855 6.805 14.3955 7.445 14.0055 7.835Z" fill="#8F9BB3"></path></svg></button>
+							
+							<button type="button" class=" text-white btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fermer">Back To Projects.</button>
+						</div>
+						<div class="offcanvas-body">
+							<hr>
+							<h1>{{ project.name}}</h1>
+							<div><img class="img-sidebar img-fluid rounded-3" src="{{project.imageHomePage}}"></div>
+							<div class="description-sidebar">
+								<h3 class="h3-sidebar">Description</h3>
+								<p class="text-justify">{{ project.description}}
+								</p>
+							</div>
+							<div class="technos-sidebar">
+								<h3 class="h3-sidebar">Technologies</h3>
+								<ul class="list-inline-sidebar">
+									{% for techno in project.Technos() %}
+										<li class="techno-sidebar">{{ techno.name() }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="website-sidebar">
+								<h3 class="h3-sidebar">
+									<svg class="svg-sidebar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-europe-africa" viewbox="0 0 16 16">
+										<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM3.668 2.501l-.288.646a.847.847 0 0 0 1.479.815l.245-.368a.809.809 0 0 1 1.034-.275.809.809 0 0 0 .724 0l.261-.13a1 1 0 0 1 .775-.05l.984.34c.078.028.16.044.243.054.784.093.855.377.694.801-.155.41-.616.617-1.035.487l-.01-.003C8.274 4.663 7.748 4.5 6 4.5 4.8 4.5 3.5 5.62 3.5 7c0 1.96.826 2.166 1.696 2.382.46.115.935.233 1.304.618.449.467.393 1.181.339 1.877C6.755 12.96 6.674 14 8.5 14c1.75 0 3-3.5 3-4.5 0-.262.208-.468.444-.7.396-.392.87-.86.556-1.8-.097-.291-.396-.568-.641-.756-.174-.133-.207-.396-.052-.551a.333.333 0 0 1 .42-.042l1.085.724c.11.072.255.058.348-.035.15-.15.415-.083.489.117.16.43.445 1.05.849 1.357L15 8A7 7 0 1 1 3.668 2.501Z"/>
+									</svg>Website</h3>
+								<a class="website" href="#">https://scoutbar.co</a>
+							</div>
+
+							<div class="website-sidebar">
+								<h3 class="h3-sidebar">
+									<svg class="svg-sidebar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewbox="0 0 16 16">
+										<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+									</svg>Github</h3>
+								<a class="github" href="#">https://scoutbar.co</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</main>
 {% endblock %}

@@ -14,7 +14,7 @@ import 'bootstrap';
 
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById("animationText");
-    const text = "Welcome!";
+    const text = "I'M DIOP MOUHAMED";
     let index = 0;
 
     function typeWriter() {
