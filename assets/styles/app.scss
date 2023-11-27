@@ -55,6 +55,7 @@ body{
 
 .custom-border{
     border-left: 3px solid;
+     margin-left: -2px;
 }
 .custom-title{
     font-size: 36px;
@@ -197,3 +198,11 @@ p {
     font-weight: 500;
     font-size: larger;
   }
+
+ 
+//     footer {
+//         position: fixed;
+//         bottom: 0;
+//         left: 0;
+//         width: 100%;
+//   }
