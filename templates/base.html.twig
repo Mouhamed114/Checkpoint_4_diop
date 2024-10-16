@@ -12,14 +12,28 @@
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
-
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
         {% include 'includes/_navbar.html.twig' %}
-        {% block body %}{% endblock %}  
+
+        {# Insertion des messages flash ici #}
+        <div class="container mt-4">
+            {% for type, messages in app.flashes %}
+                <div class="alert alert-{{ type }} alert-dismissible fade show" role="alert">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% block body %}{% endblock %}
+
         {# {% include 'includes/_footer.html.twig' %} #}
     </body>
 </html>
+

@@ -42,23 +42,23 @@ class HomeController extends AbstractController
     }
 
     #[Route('/email', name: 'send_email', methods: ['POST'])]
-public function sendEmail(Request $request, MailerInterface $mailer): Response
-{
-    $name = $request->request->get('name');
-    $userEmail = $request->request->get('email');
-    $messageContent = $request->request->get('message');
+    public function sendEmail(Request $request, MailerInterface $mailer): Response
+    {
+        $name = $request->request->get('name');
+        $userEmail = $request->request->get('email');
+        $messageContent = $request->request->get('message');
 
-    // Votre propre adresse e-mail où vous souhaitez recevoir les messages
-    $recipientEmail = 'mouhamediop114@gmail.com'; 
+        // Votre propre adresse e-mail où vous souhaitez recevoir les messages
+        $recipientEmail = 'mouhamediop114@gmail.com';
 
-    // Vérification que l'adresse e-mail fournie par l'utilisateur est valide
-    if (!filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
-        $this->addFlash('error', 'Adresse e-mail invalide.');
-        return $this->redirectToRoute('app_contact');
-    }
+        // Vérification que l'adresse e-mail fournie par l'utilisateur est valide
+        if (!filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
+            $this->addFlash('error', 'Adresse e-mail invalide.');
+            return $this->redirectToRoute('app_contact');
+        }
 
-    // Création de l'e-mail
-    $email = (new Email())
+        // Création de l'e-mail
+        $email = (new Email())
         ->from($recipientEmail) // Votre propre adresse d'expéditeur
         ->to($recipientEmail) // Où vous souhaitez recevoir les messages
         ->replyTo($userEmail) // Adresse de l'utilisateur comme adresse de réponse
@@ -66,15 +66,14 @@ public function sendEmail(Request $request, MailerInterface $mailer): Response
         ->text($messageContent)
         ->html('<p>' . nl2br($messageContent) . '</p>');
 
-    // Essai d'envoi de l'e-mail
-    try {
-        $mailer->send($email);
-        $this->addFlash('success', 'Votre message a été envoyé avec succès.');
-    } catch (\Exception $e) {
-        $this->addFlash('error', 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+        // Essai d'envoi de l'e-mail
+        try {
+            $mailer->send($email);
+            $this->addFlash('success', 'Votre message a été envoyé avec succès.');
+        } catch (\Exception $e) {
+            $this->addFlash('error', 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+        }
+
+        return $this->redirectToRoute('app_contact');
     }
-
-    return $this->redirectToRoute('app_contact');
-}
-
 }
