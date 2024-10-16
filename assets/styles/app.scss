@@ -3,7 +3,7 @@
 @import "~bootstrap/scss/bootstrap";  
 
 body{
-    background-color: #020a13 !important;
+    background-color: #1b0927;
 }
 .navbar, .footer {
     background-color: transparent;
@@ -206,3 +206,17 @@ p {
 //         left: 0;
 //         width: 100%;
 //   }
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgb(174, 179, 193);
+  }
