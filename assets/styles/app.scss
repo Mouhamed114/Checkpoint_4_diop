@@ -1,9 +1,13 @@
-
-
 @import "~bootstrap/scss/bootstrap";  
 
+// Variables
+$primary-bg: #1b0927;
+$secondary-bg: #845EC2;
+$text-light: whitesmoke;
+$text-dark: #c4c8ca96;
+
 body{
-    background-color: #1b0927;
+    background-color: $primary-bg;
 }
 .navbar, .footer {
     background-color: transparent;
@@ -12,6 +16,8 @@ body{
     padding: 12px;
     margin-bottom: 4em;
 }
+
+// Textes 
 
 .text-white{
     font-weight: 800;
@@ -179,6 +185,10 @@ p {
   .card-body{
     min-height: 35em;
   }
+  .description-card-hover{
+    position: absolute !important;
+    bottom: 0 !important;
+  }
   .label-form{
     margin-bottom: 17px;
     color: #c4c8ca96;
@@ -220,3 +230,5 @@ p {
   .btn:hover {
     background-color: rgb(174, 179, 193);
   }
+
+  
