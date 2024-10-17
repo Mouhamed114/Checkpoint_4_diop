@@ -19,7 +19,7 @@
     <body>
         {% include 'includes/_navbar.html.twig' %}
 
-        {# Insertion des messages flash ici #}
+        {# Insertion des messages flash #}
         <div class="container mt-4">
             {% for type, messages in app.flashes %}
                 <div class="alert alert-{{ type }} alert-dismissible fade show" role="alert">
