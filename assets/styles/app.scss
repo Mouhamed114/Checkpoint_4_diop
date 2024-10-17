@@ -7,48 +7,124 @@ $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
 // Styles
-body{
+html, body{
     background-color: $primary-bg;
+    height: 100%;
 }
 .navbar, .footer {
     background-color: transparent !important;
 }
+
+/////////////////// Navbar ///////////////
 .navbar{
     padding: 60px 0px;
     margin:0 14em !important;
     transition: 0.5s;
     display: contents;
 }
-
-// Textes 
-
- .nav-link{
-//     font-weight: 800;
-font-family: emoji;
-  font-size: 22px;
-padding: 8px 15px !important;
-}
-
-
-
-
-.containers {
-    margin: 0 5%;
-    width: auto !important;
-}
-// .navbar{
-//     display: contents; 
-// }
-
 .circle {
     width: 25px;
     height: 25px;
     display: inline-block;
     border-radius: 20%;
-    background-color: #845EC2;
+    background-color: $secondary-bg;
     transform: translateX(-50%);
 }
+.container-fluid {
+    padding: 60px 325px; // Padding pour desktop
+}
 
+// Media query pour les écrans mobiles (moins de 768px)
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 12px 35px; // Padding pour mobile
+    }
+
+    .navbar {
+        padding: 12px 0; // Padding pour la navbar sur mobile (ou ajustez selon besoin)
+    }
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='whitesmoke' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: $text-light;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Pseudo-élément pour ajouter la ligne de soulignement sous chaque lien, mais PAS les SVG */
+.nav-link span::after {
+    content: "";
+    position: absolute;
+    width: 0;  /* Initialement invisible */
+    height: 1px;
+    bottom: 0;
+    left: 50%;  /* Ligne commence au milieu */
+    background-color: $text-light;  /* Couleur de la ligne de soulignement */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Lorsque le texte du lien (span) est survolé, la ligne s'étend */
+.nav-link span:hover::after {
+    width: 100%;  /* Réduire la largeur à 50% */
+    left: 0%;  /* Centrer la ligne */
+}
+
+/* Désactiver l'effet de survol pour les SVG */
+.nav-link svg {
+    transition: none;  /* Aucune animation ou effet de transition */
+}
+
+//////////////   fOOTER   ///////////
+.logo-footer{
+   
+    width: 100px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Gardez le ratio de l'image */
+}
+
+.rs-icons svg {
+    transition: transform 0.3s ease; /* Transition douce pour le zoom */
+  }
+
+  /* Effet de zoom au survol */
+  .rs-icons svg:hover {
+    transform: scale(1.2); /* Zoom à 120% */
+  }
+
+/////////////////// Textes COLOR///////////////////
+.label-form{
+    margin-bottom: 17px;
+    color: $text-dark;
+  }
+  .text-contact{
+    color: $text-dark;
+  }
+
+  .text-footer{
+    color: $text-dark;
+  }
+  .text-home{
+    color: $text-dark;
+  }
+  .text-about{
+    color: $text-dark;
+    font-weight: 500;
+    font-size: larger;
+  }
+  ////////////////////////////////////////////////////////
+ .nav-link{
+    font-family: emoji;
+    font-size: 22px;
+    padding: 8px 15px !important;
+    }
+
+.containers {
+    margin: 0 5%;
+    width: auto !important;
+}
 .custom-container-about{
     padding-left: 5%!important;
     padding-right: 5% !important;
@@ -79,47 +155,32 @@ padding: 8px 15px !important;
     padding-left: 3%;
     border-left: 2px solid black;
 }
-
  .form-textarea {
-    
     height: 137px;
-//     padding-top: 1.6rem;
-//     padding-bottom: 1.6rem;
-//     line-height: 1.7;
 }
 .input-email{
 margin-top: 20px;
 }
-
 .custom-svg .center {
     text-align: center;
     margin-bottom: 4em;
 }
-
-
 .custom-svg  .icon-svg{
     height: 50px;
     width: 50px;
-
 }
-
-
 .custom-svg a {
     margin-right: 20%;
     margin-bottom: 5%;
     text-decoration: none !important;
 }
-
 .custom-svg .link-twitter, .custom-svg  .link-facebook {
     margin-right: 20%;
-
 }
-
 .button-submit{
     text-align: right;
     padding-top: 3%;    
 }
-
 .custom-contact-rs{
     border-bottom: 1px solid;
     border-bottom-color: rgb(131 131 131);
@@ -140,29 +201,6 @@ p {
 .emailInput {
     margin-top: 5%;
 }
-
-
-@media only screen and (max-width: 1200px) {
-    .custom-contact-rs .custom-svg a span{
-        display: none;
-    }
-
-    .custom-container-about .para_title p {
-        border-left: 1px solid black;
-    }
-    .custom-svg{
-        margin-left: 26px;
-        margin-top: 26px;
-    }
-  }
-
-
-  @media only screen and (max-width: 768px) {
-    .custom-border {
-        border-left: 0px solid;
-    }
-  }
-
   .card-body{
     min-height: 35em;
   }
@@ -170,34 +208,6 @@ p {
     position: absolute !important;
     bottom: 0 !important;
   }
-  .label-form{
-    margin-bottom: 17px;
-    color: #c4c8ca96;
-  }
-  .text-contact{
-    color: #c4c8ca96;
-  }
-
-  .text-footer{
-    color: #c4c8ca96;
-  }
-  .text-home{
-    color: #c4c8ca96;
-  }
-  .text-about{
-    color: #c4c8ca96;
-    font-weight: 500;
-    font-size: larger;
-  }
-
- 
-//     footer {
-//         position: fixed;
-//         bottom: 0;
-//         left: 0;
-//         width: 100%;
-//   }
-
 .btn {
     background-color: DodgerBlue;
     border: none;
@@ -212,100 +222,25 @@ p {
     background-color: rgb(174, 179, 193);
   }
 
-//   /* Pour les écrans de moins de 768px (tablettes et téléphones) */
-// @media (max-width: 768px) {
-//     .logo-navbar {
-//         width: 80px; /* Ajustez la taille du logo pour petits écrans */
-//     }
-
-//     .navbar-nav .nav-link {
-//         font-size: 14px; /* Réduire la taille des liens sur mobile */
-//     }
-// }
-// @media (max-width: 992px) and (min-width: 768px) {
-//     .navbar {
-//         padding: 55px 225px; // Padding pour tablette
-//     }
-// }
-.container-fluid {
-    padding: 60px 325px; // Padding pour desktop
-}
-
-// Media query pour les écrans mobiles (moins de 768px)
-@media (max-width: 768px) {
-    .container-fluid {
-        padding: 12px 35px; // Padding pour mobile
+////////////////////// MEDIA QUERIES ///////////////
+@media only screen and (max-width: 1200px) {
+    .custom-contact-rs .custom-svg a span{
+        display: none;
     }
 
-    .navbar {
-        padding: 12px 0; // Padding pour la navbar sur mobile (ou ajustez selon besoin)
+    .custom-container-about .para_title p {
+        border-left: 1px solid black;
     }
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='whitesmoke' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-
-// /* Pour les écrans de moins de 576px (téléphones) */
-// @media (max-width: 576px) {
-//     .logo-navbar {
-//         width: 60px;
-//     }
-
-//     .navbar-nav .nav-link {
-//         font-size: 12px;
-//     }
-// }
-
-/* Style pour les liens de la navbar */
-.nav-link {
-    position: relative;
-    text-decoration: none;
-    color: white;
-    padding-bottom: 5px;
-    transition: color 0.3s ease-in-out;
-}
-
-/* Pseudo-élément pour ajouter la ligne de soulignement sous chaque lien, mais PAS les SVG */
-.nav-link span::after {
-    content: "";
-    position: absolute;
-    width: 0;  /* Initialement invisible */
-    height: 1px;
-    bottom: 0;
-    left: 50%;  /* Ligne commence au milieu */
-    background-color: whitesmoke;  /* Couleur de la ligne de soulignement */
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
-
-/* Lorsque le texte du lien (span) est survolé, la ligne s'étend */
-.nav-link span:hover::after {
-    width: 100%;  /* Réduire la largeur à 50% */
-    left: 0%;  /* Centrer la ligne */
-}
-
-/* Désactiver l'effet de survol pour les SVG */
-.nav-link svg {
-    transition: none;  /* Aucune animation ou effet de transition */
-}
-//////////////   fOOTER   ///////////
-.logo-footer{
-   
-    width: 100px; /* Ajustez la largeur selon vos besoins */
-    height: auto; /* Gardez le ratio de l'image */
-}
-
-.rs-icons svg {
-    // width: 40px;
-    // height: 40px;
-    transition: transform 0.3s ease; /* Transition douce pour le zoom */
+    .custom-svg{
+        margin-left: 26px;
+        margin-top: 26px;
+    }
   }
-
-  /* Effet de zoom au survol */
-  .rs-icons svg:hover {
-    transform: scale(1.2); /* Zoom à 120% */
+  @media only screen and (max-width: 768px) {
+    .custom-border {
+        border-left: 0px solid;
+    }
   }
-
 
 
 
