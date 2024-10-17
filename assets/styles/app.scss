@@ -17,6 +17,7 @@ body{
     padding: 60px 0px;
     margin:0 14em !important;
     transition: 0.5s;
+    display: contents;
 }
 
 // Textes 
@@ -46,8 +47,8 @@ padding: 8px 15px !important;
     margin: 0 5%;
     width: auto !important;
 }
-// .container {
-//     margin: 1px 0px; 
+// .navbar{
+//     display: contents; 
 // }
 
 .circle {
@@ -241,16 +242,36 @@ p {
     background-color: rgb(174, 179, 193);
   }
 
-  /* Pour les écrans de moins de 768px (tablettes et téléphones) */
+//   /* Pour les écrans de moins de 768px (tablettes et téléphones) */
+// @media (max-width: 768px) {
+//     .logo-navbar {
+//         width: 80px; /* Ajustez la taille du logo pour petits écrans */
+//     }
+
+//     .navbar-nav .nav-link {
+//         font-size: 14px; /* Réduire la taille des liens sur mobile */
+//     }
+// }
+// @media (max-width: 992px) and (min-width: 768px) {
+//     .navbar {
+//         padding: 55px 225px; // Padding pour tablette
+//     }
+// }
+.container-fluid {
+    padding: 50px 225px; // Padding pour desktop
+}
+
+// Media query pour les écrans mobiles (moins de 768px)
 @media (max-width: 768px) {
-    .logo-navbar {
-        width: 80px; /* Ajustez la taille du logo pour petits écrans */
+    .container-fluid {
+        padding: 12px 35px; // Padding pour mobile
     }
 
-    .navbar-nav .nav-link {
-        font-size: 14px; /* Réduire la taille des liens sur mobile */
+    .navbar {
+        padding: 12px 0; // Padding pour la navbar sur mobile (ou ajustez selon besoin)
     }
 }
+
 
 // /* Pour les écrans de moins de 576px (téléphones) */
 // @media (max-width: 576px) {
