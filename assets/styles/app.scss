@@ -29,18 +29,7 @@ font-family: emoji;
 padding: 8px 15px !important;
 }
 
-.iconsvg{
-    color: whitesmoke;
-}
-.icon-svg{
-    color: black;
-    font-size: 16px;
-}
-.logo-navbar{
-   
-    width: 100px; /* Ajustez la largeur selon vos besoins */
-    height: auto; /* Gardez le ratio de l'image */
-}
+
 
 
 .containers {
@@ -111,25 +100,6 @@ margin-top: 20px;
 .custom-svg  .icon-svg{
     height: 50px;
     width: 50px;
-
-}
-.facebook{
-    color: whitesmoke;
-
-}
-
-.twitter{
-    color: whitesmoke;
-
-}
-
-.instagram{
-    color: whitesmoke;
-
-}
-
-.linkdin{
-    color: whitesmoke;
 
 }
 
@@ -318,6 +288,23 @@ p {
 .nav-link svg {
     transition: none;  /* Aucune animation ou effet de transition */
 }
+//////////////   fOOTER   ///////////
+.logo-footer{
+   
+    width: 100px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Gardez le ratio de l'image */
+}
+
+.rs-icons svg {
+    // width: 40px;
+    // height: 40px;
+    transition: transform 0.3s ease; /* Transition douce pour le zoom */
+  }
+
+  /* Effet de zoom au survol */
+  .rs-icons svg:hover {
+    transform: scale(1.2); /* Zoom à 120% */
+  }
 
 
 
