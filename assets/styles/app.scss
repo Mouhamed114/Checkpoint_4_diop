@@ -74,23 +74,37 @@ html, body{
 }
 
 /* Désactiver l'effet de survol pour les SVG */
-.nav-link svg {
-    transition: none;  /* Aucune animation ou effet de transition */
-}
+
 
 //////////////   fOOTER   ///////////
-.logo-footer{
-   
-    width: 100px; /* Ajustez la largeur selon vos besoins */
-    height: auto; /* Gardez le ratio de l'image */
+.social-media svg {
+    transition: none;  /* Aucune animation ou effet de transition */
+    fill: $text-dark;
+    transition: transform 0.3s ease;
+}
+.footer p{
+    color: $text-light;
 }
 
-.rs-icons svg {
-    transition: transform 0.3s ease; /* Transition douce pour le zoom */
-  }
+@keyframes move-arrow {
+    0% {
+        transform: translateX(0); /* Position initiale */
+    }
+    50% {
+        transform: translateX(20px); /* Déplacement de 10px vers la droite */
+    }
+    100% {
+        transform: translateX(0); /* Retour à la position initiale */
+    }
+}
+.footer svg {
+    fill: $text-light;
+    animation: move-arrow 1s infinite ease-in-out; /* Animation infinie */
+}
+
 
   /* Effet de zoom au survol */
-  .rs-icons svg:hover {
+  .social-media svg:hover {
     transform: scale(1.2); /* Zoom à 120% */
   }
 
