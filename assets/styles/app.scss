@@ -56,7 +56,7 @@ html, body{
 }
 
 /* Pseudo-élément pour ajouter la ligne de soulignement sous chaque lien, mais PAS les SVG */
-.nav-link span::after {
+.nav-link::after {
     content: "";
     position: absolute;
     width: 0;  /* Initialement invisible */
@@ -68,7 +68,7 @@ html, body{
 }
 
 /* Lorsque le texte du lien (span) est survolé, la ligne s'étend */
-.nav-link span:hover::after {
+.nav-link:hover::after {
     width: 100%;  /* Réduire la largeur à 50% */
     left: 0%;  /* Centrer la ligne */
 }
