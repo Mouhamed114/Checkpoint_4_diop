@@ -7,10 +7,49 @@ $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
 // Styles
-html, body{
-    background-color: $primary-bg;
-    height: 100%;
+html, body {
+    height: 100%; /* Assure que le html et le body occupent toute la hauteur */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    overflow-x: hidden; /* Évite le défilement horizontal */
 }
+
+body {
+    /* Fond blanc de base */
+    background-color: white;
+    
+    /* S'assurer que l'élément occupe tout l'espace visible */
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    /* Le pseudo-élément ::before qui génère les carreaux */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Les carreaux avec des lignes plus grandes et un zoom appliqué */
+    background: linear-gradient(rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 120px 110px, 
+                linear-gradient(to right, rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 120px 110px;
+    
+    /* Couleur violette semi-transparente par-dessus */
+    background-color: #131720; /* Violet avec 80% d'opacité */
+    
+    /* S'assurer que le pseudo-élément est en arrière-plan */
+    z-index: -1;
+}
+
+
+
+
+
+
+
 .navbar, .footer {
     background-color: transparent !important;
 }
@@ -152,12 +191,6 @@ html, body{
     border-left: 3px solid;
      margin-left: -2px;
 }
-.custom-title{
-    font-size: 36px;
-    font-family: 'Kavoon';
-    color: aliceblue;
-    margin-bottom: 1em;
-}
 
 .h3-about {
     display: inline-block;
@@ -199,7 +232,7 @@ margin-top: 20px;
     border-bottom-color: rgb(131 131 131);
 }
 .button{
-    font-family: 'kavoon';
+    // font-family: 'kavoon';
     background-color: #e1e1e1;
     font-size: 1.1rem;
     border: none;

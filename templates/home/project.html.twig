@@ -16,9 +16,17 @@
 {% block body %}
 	<main class="mb-auto project">
 		<div class="container mt-4">
-			<div class="d-flex align-items-start justify-content-center">
-				<h1 class="custom-title">Project</h1>
+			<div class="d-flex pb-3 align-items-start justify-content-start">
+				<h1 class="custom-title">Projects.</h1>
 			</div>
+			<div class=" nav-project d-flex align-items-center justify-content-center pt-5" style="min-height: 43px;" role="tablist">
+                <button class=" tab-list-active" type="button" aria-label="Open All" aria-current="All">All</button>
+                <button class="tab-list-item" type="button" aria-label="Open Projects" aria-current="Projects">Projects</button>
+                <button class="tab-list-item" type="button" aria-label="Open Dev Tools" aria-current="Dev Tools">Dev Tools</button>
+                <button class="tab-list-item" type="button" aria-label="Open Open Source" aria-current="Open Source">Open Source</button>
+                <a class="tab-list-item text-decoration-none" href="https://dribbble.com/codewonders" target="_blank" rel="noopener noreferrer" aria-label="Open Designs" aria-current="Designs">Designs</a>
+            </div>
+
 		</div>
 		<div class="container mt-5">
 			<div class="row">
