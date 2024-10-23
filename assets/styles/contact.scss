@@ -1,0 +1,86 @@
+// Variables
+$primary-bg: #1b0927;
+$secondary-bg: #845EC2;
+$text-light: whitesmoke;
+$text-dark: #c4c8ca96;
+
+/* Container padding */
+.container {
+    padding: 0 15px;
+}
+
+/* H1 title */
+.intro__text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e1e1e1;
+}
+// b{
+//     font-weight: bolder !important;
+// }
+
+/* Paragraph under title */
+.intro-paragraph {
+    font-size: calc(0.875rem + 0.9px);
+    margin-top: 2.6rem;
+    line-height: 2;
+    font-weight: 400;
+    color: #c6c6c6 !important;
+}
+
+/* Form fields */
+.fields .form-group {
+    margin-bottom: 1.5rem;
+}
+
+// /* Input fields */
+// .fields input[type="text"],
+// .fields input[type="email"],
+// .fields textarea {
+//     width: 100%;
+//     padding: 0.75rem;
+//     font-size: calc(var(--font-sm) + 0.9px);
+//     border: 1px solid #ddd;
+//     border-radius: 0.25rem;
+//     margin-top: 0.5rem;
+// }
+
+/* Submit button */
+.button-submit {
+    font-size: calc(var(--font-sm) + 0.9px);
+    margin-top: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+input, textarea {
+    background: transparent !important; /* Arrière-plan transparent */
+    // border: 1px solid #e1e1e1 !important; /* Bordure grise (ou une autre couleur) */
+    padding: 24px 21px !important; /* Pour l'espacement interne */
+    box-shadow: none !important;
+    resize: none;
+    margin-bottom: 2rem;
+    border-radius: 5px; /* Arrondir les coins si nécessaire */
+    color: #e1e1e1 !important; /* Couleur du texte */
+    font-size: 16px; /* Taille du texte */
+    border-color: #131c25 !important;
+}
+input::placeholder,
+        textarea::placeholder {
+            font-size: 18px; /* Taille de police du placeholder */
+            color: #e1e1e1 !important; /* Couleur du placeholder */
+            opacity: 1; /* S'assurer que le placeholder est opaque */
+        }
+
+
+input:focus, textarea:focus {
+    background-color: rgba(73, 47, 86, 0.075) !important; /* Couleur de fond au focus */
+    // outline: none; /* Retirer le contour par défaut */
+}
+textarea.form-control {
+    height: auto !important;
+}

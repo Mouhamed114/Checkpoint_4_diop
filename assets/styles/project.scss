@@ -5,6 +5,8 @@ $secondary-bg: #845EC2;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
+
+///////////////////////////////////// CARD PROJECT  ////////////////////////////////////////////
         .card-text,
         .card-title,
         .list-inline-item {
@@ -12,17 +14,15 @@ $text-dark: #c4c8ca96;
             opacity: 0;
             transition: visibility 0s, opacity 0.3s;
         }
-        // .project-card {
-        //     overflow: hidden; /* Empêche le débordement au survol */
+       
+        // @media (max-width: 576px) { /* Ajustez la largeur selon vos besoins */
+        //     .card-text,
+        //     .card-title,
+        //     .list-inline-item {
+        //         visibility: visible; /* Rendre visible sur mobile */
+        //         opacity: 1; /* Assurez-vous que l'opacité est à 1 */
+        //     }
         // }
-        @media (max-width: 576px) { /* Ajustez la largeur selon vos besoins */
-            .card-text,
-            .card-title,
-            .list-inline-item {
-                visibility: visible; /* Rendre visible sur mobile */
-                opacity: 1; /* Assurez-vous que l'opacité est à 1 */
-            }
-        }
 
        
         .custom-card:hover .card-text,
@@ -31,8 +31,6 @@ $text-dark: #c4c8ca96;
             visibility: visible;
             opacity: 1;
         }
-
-       
         .custom-card:hover {
             transform: scale(1.05); 
             z-index: 1; 
@@ -66,11 +64,9 @@ $text-dark: #c4c8ca96;
             border-radius: 5px;
         }
 
-        .project .custom-card {
-            border-radius: 0;
+        .project{
+            padding: 0 15%;
         }
-
-        
         .technos{
             background: rgb(105, 104, 105);
             padding: 4px 10px;
@@ -81,7 +77,13 @@ $text-dark: #c4c8ca96;
             color: rgb(255, 255, 255);
             font-weight: 500;
         }
+        .card-body{
+            min-height: 30em;
+          }
+          ///////////////////////////////////// END CARD PROJECT  ////////////////////////////////////////////
 
+
+        ////////////////// lIST NAVIGATION PROJECTPAGE//////////////////////
         .tab-list-item {
             margin: 0px 1rem 0px 0px;
             font-size: 1.1rem; /* Réduction de la taille de police en rem */
@@ -102,18 +104,9 @@ $text-dark: #c4c8ca96;
             border: none;
             border-radius: 5px;
         }
-        
-        
-        
-        
-        .card-body{
-            min-height: 30em;
-          }
-        //   .description-card-hover{
-        //     position: absolute !important;
-        //     bottom: 0 !important;
-        //   }
-///////////////////////////// SIDEBAR ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+         ////////////////// END lIST NAVIGATION PROJECTPAGE   /////////////////////////
+         
+///////////////////////////// SIDEBAR ///////////////////////////////////////////////
         .sidebar-project{
             background-color: #020a13;
             width: 37rem !important;
@@ -168,3 +161,4 @@ $text-dark: #c4c8ca96;
             color: #e1e1e1;
             font-weight: bold;
         }
+        ////////////////////////    END SIDEBAR   ////////////////////////////////////////////////////

@@ -1,7 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}About{% endblock %}
-
+    {% block stylesheets %}
+		{{ parent()}}
+		{{ encore_entry_link_tags('about') }}
+	{% endblock %}
+	
+	{% block javascripts %}
+		{{ parent()}}
+		{{ encore_entry_script_tags('about') }}
+	{% endblock %}
 {% block body %}
     <div class="container mt-4">
         <div class="d-flex align-items-start justify-content-start">

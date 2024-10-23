@@ -58,7 +58,7 @@
 						<div class="offcanvas-body">
 							<hr>
 							<h1>{{ project.name}}</h1>
-							<div><img class="img-sidebar img-fluid rounded-3" src="{{project.imageHomePage}}"></div>
+							<div><img class="img-sidebar img-fluid rounded-3" src="{{ asset(project.imageHomePage()) }}"></div>
 							<div class="description-sidebar">
 								<h3 class="h3-sidebar">Description</h3>
 								<p class="text-justify">{{ project.description}}

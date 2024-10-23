@@ -59,12 +59,6 @@ body::before {
     z-index: -1;
 }
 
-
-
-
-
-
-
 .navbar, .footer {
     background-color: transparent !important;
 }
@@ -126,7 +120,7 @@ body::before {
     width: 100%;  /* Réduire la largeur à 50% */
     left: 0%;  /* Centrer la ligne */
 }
-
+///////////////////////////// END NAVBAR ////////////////////////////////////
 
 
 //////////////   fOOTER   ///////////
@@ -160,6 +154,7 @@ body::before {
   .social-media svg:hover {
     transform: scale(1.2); /* Zoom à 120% */
   }
+  ///////////////////////////// END FOOTER ////////////////////////////////////////////
 
 /////////////////// Textes COLOR///////////////////
 .label-form{
@@ -192,10 +187,7 @@ body::before {
     margin: 0 5%;
     width: auto !important;
 }
-.custom-container-about{
-    padding-left: 5%!important;
-    padding-right: 5% !important;
-}
+
 .custom-title{
     font-size: 4.075vw;
     font-weight: 900;
@@ -203,108 +195,108 @@ body::before {
     color: $text-light;
 }
 
-.custom-presentation p{
-    padding-left: 2em;
-    margin-bottom: 0px;
-}
+// .custom-presentation p{
+//     padding-left: 2em;
+//     margin-bottom: 0px;
+// }
 
 .custom-border{
     border-left: 3px solid;
      margin-left: -2px;
 }
 
-.h3-about {
-    display: inline-block;
-     color: #e1e1e1;
-}
+// .h3-about {
+//     display: inline-block;
+//      color: #e1e1e1;
+// }
 
-.custom-container-about .p-title p {
-    padding-left: 3%;
-    border-left: 1px solid whitesmoke;
-    height: 150%
-}
-.p-title {
-    position: relative; /* Nécessaire pour que le pseudo-élément soit positionné par rapport à l'élément parent */
-    padding-left: 3%;
-}
+// .custom-container-about .p-title p {
+//     padding-left: 3%;
+//     border-left: 1px solid whitesmoke;
+//     height: 150%
+// }
+// .p-title {
+//     position: relative; /* Nécessaire pour que le pseudo-élément soit positionné par rapport à l'élément parent */
+//     padding-left: 3%;
+// }
 
-.p-title::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0; /* Étendre la bordure sur toute la hauteur */
-    left: 0;
-    width: 1px; /* Largeur de la bordure */
-    background-color: whitesmoke; /* Couleur de la bordure */
-    height: 100%; /* Augmenter la longueur de la bordure, ici à 150% de l'élément */
-}
+// .p-title::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     bottom: 0; /* Étendre la bordure sur toute la hauteur */
+//     left: 0;
+//     width: 1px; /* Largeur de la bordure */
+//     background-color: whitesmoke; /* Couleur de la bordure */
+//     height: 100%; /* Augmenter la longueur de la bordure, ici à 150% de l'élément */
+// }
 
- .form-textarea {
-    height: 137px;
-}
-.input-email{
-margin-top: 20px;
-}
-.custom-svg .center {
-    text-align: center;
-    margin-bottom: 4em;
-}
-.custom-svg  .icon-svg{
-    height: 50px;
-    width: 50px;
-}
-.custom-svg a {
-    margin-right: 20%;
-    margin-bottom: 5%;
-    text-decoration: none !important;
-}
-.custom-svg .link-twitter, .custom-svg  .link-facebook {
-    margin-right: 20%;
-}
-.button-submit{
-    text-align: right;
-    padding-top: 3%;    
-}
-.custom-contact-rs{
-    border-bottom: 1px solid;
-    border-bottom-color: rgb(131 131 131);
-}
-.button{
-    // font-family: 'kavoon';
-    background-color: #e1e1e1;
-    font-size: 1.1rem;
-    border: none;
-    padding: 5px 15px;
-    text-align: center;
-    border-radius: 4px;
-}
-p {
-    text-align: justify !important;
-  }
+//  .form-textarea {
+//     height: 137px;
+// }
+// .input-email{
+// margin-top: 20px;
+// }
+// .custom-svg .center {
+//     text-align: center;
+//     margin-bottom: 4em;
+// }
+// .custom-svg  .icon-svg{
+//     height: 50px;
+//     width: 50px;
+// }
+// .custom-svg a {
+//     margin-right: 20%;
+//     margin-bottom: 5%;
+//     text-decoration: none !important;
+// }
+// .custom-svg .link-twitter, .custom-svg  .link-facebook {
+//     margin-right: 20%;
+// }
+// .button-submit{
+//     text-align: right;
+//     padding-top: 3%;    
+// }
+// .custom-contact-rs{
+//     border-bottom: 1px solid;
+//     border-bottom-color: rgb(131 131 131);
+// }
+// .button{
+//     // font-family: 'kavoon';
+//     background-color: #e1e1e1;
+//     font-size: 1.1rem;
+//     border: none;
+//     padding: 5px 15px;
+//     text-align: center;
+//     border-radius: 4px;
+// }
+// p {
+//     text-align: justify !important;
+//   }
 
-.emailInput {
-    margin-top: 5%;
-}
-  .card-body{
-    min-height: 35em;
-  }
-  .description-card-hover{
-    position: absolute !important;
-    bottom: 0 !important;
-  }
-.btn {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-  }
+// .emailInput {
+//     margin-top: 5%;
+// }
+//   .card-body{
+//     min-height: 35em;
+//   }
+//   .description-card-hover{
+//     position: absolute !important;
+//     bottom: 0 !important;
+//   }
+// .btn {
+//     background-color: DodgerBlue;
+//     border: none;
+//     color: white;
+//     padding: 12px 30px;
+//     cursor: pointer;
+//     font-size: 20px;
+//   }
   
-  /* Darker background on mouse-over */
-  .btn:hover {
-    background-color: rgb(174, 179, 193);
-  }
+//   /* Darker background on mouse-over */
+//   .btn:hover {
+//     background-color: rgb(174, 179, 193);
+//   }
 
 ////////////////////// MEDIA QUERIES ///////////////
 @media only screen and (max-width: 1200px) {
@@ -328,96 +320,26 @@ p {
 
 
 
-  /* Global Styles for About Page */
-.custom-container-about {
-    position: relative;
-}
-
-.custom-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #e1e1e1;
-}
-
-.h3-about {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #e1e1e1;
-}
-
-/* Timeline Styles */
-ul.timeline {
-    position: relative;
-    padding-left: 40px;
-    list-style: none;
-    padding-bottom: 20px;
-}
-
-ul.timeline::before {
-    content: " ";
-    background: #ffffff5e; /* Line color */
-    position: absolute;
-    left: 12px; /* Adjust the position so that the line is centered in relation to the circle */
-    top: 0;
-    width: 1px; /* Line thickness */
-    height: 100%;
-    z-index: 0; /* Place behind the list items */
-    top: 15px;
-    height: calc(100% - 86px); 
-}
-
-ul.timeline li {
-    position: relative;
-    margin: 8px 0 48px;
-    // padding-left: 20px;
-}
-
-ul.timeline li::before {
-    content: " ";
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid #e1e1e1; /* Border for the circle */
-    left: -36px; /* Position the circle correctly */
-    top: 8px; /* Adjust based on the vertical alignment */
-    width: 17px;
-    height: 17px;
-    z-index: 1; /* Place above the line */
-    background: #080f18;
-    border: 3px solid #ffffff;
-    // box-shadow: 0 0 0 4px #ffffff;
-}
-// ul.timeline li::after {
-//     content: "";
+////////////////////////////CURSOR////////////////////////
+/* Style du petit point qui suit la souris */
+// #cursor {
 //     position: absolute;
+//     width: 10px;
+//     height: 10px;
+//     background-color: white;
 //     border-radius: 50%;
-//     top: 8px; /* Position identique au cercle */
-//     left: -36px; /* Assure que le masque recouvre la zone du trait */
-//     width: 17px; /* Taille du masque pour couvrir le trait */
-//     height: 17px; /* Hauteur du masque */
-//     background-color: $primary-bg; /* Couleur de fond qui masque le trait (blanc) */
-//     z-index: 2; /* Masque le trait à l'intérieur du cercle */
-// }
-/* Dernier élément de la liste (le dernier li) */
-// ul.timeline li:last-child::before {
-//     margin-bottom: 0; /* Supprime l'espacement en bas du dernier cercle */
+//     pointer-events: none; /* Empêche l'élément d'interférer avec d'autres éléments interactifs */
+//     z-index: 100;
 // }
 
-/* Masque le trait sous le dernier cercle */
-// ul.timeline li:last-child::after {
-//     display: none; /* Désactive le trait vertical sous le dernier élément */
+// /* Style du cercle qui suit la souris */
+// #circle {
+//     position: absolute;
+//     width: 50px;
+//     height: 50px;
+//     border: 2px solid rgba(255, 255, 255, 0.6);
+//     border-radius: 50%;
+//     pointer-events: none;
+//     z-index: 99;
+//     transition: transform 0.1s ease;
 // }
-
-/* Link and Paragraph Styles */
-ul.timeline li a {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #e1e1e1;
-    text-decoration: none;
-}
-
-ul.timeline li p {
-    color: #c6c6c6;
-    margin: 9.6px 0 16px;
-    font-size: 1rem;
-}
