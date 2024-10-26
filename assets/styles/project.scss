@@ -5,7 +5,20 @@ $secondary-bg: #845EC2;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
+@media (min-width: 992px) {
+    .ml-lg-8rem {
+        margin-left: 8rem;
+    }
+}
 
+.col-contact {
+    padding-left: 0 !important;
+}
+.intro_text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e1e1e1;
+}
 ///////////////////////////////////// CARD PROJECT  ////////////////////////////////////////////
         .card-text,
         .card-title,
@@ -14,16 +27,6 @@ $text-dark: #c4c8ca96;
             opacity: 0;
             transition: visibility 0s, opacity 0.3s;
         }
-       
-        // @media (max-width: 576px) { /* Ajustez la largeur selon vos besoins */
-        //     .card-text,
-        //     .card-title,
-        //     .list-inline-item {
-        //         visibility: visible; /* Rendre visible sur mobile */
-        //         opacity: 1; /* Assurez-vous que l'opacité est à 1 */
-        //     }
-        // }
-
        
         .custom-card:hover .card-text,
         .custom-card:hover .card-title,
@@ -41,31 +44,22 @@ $text-dark: #c4c8ca96;
         }
 
         .card.h-100.d-flex.flex-column.custom-card {
-            min-height: 300px;
             background-size: cover;
             background-position: center;
         }
         
-        .project .card-body {
-            padding: 0;
-        }
-        
-        .project .card.h-100.d-flex.flex-column.custom-card:hover .description-card-hover {
+        .card.h-100.d-flex.flex-column.custom-card:hover .description-card-hover {
             color: white;
             opacity: 1;
             background-color: rgba(0, 0, 0, .69);
         }
         
-        .project .description-card-hover {
-            position: fixed;
+        .description-card-hover {
+            position: absolute;
             bottom: 0;
             width: 100%;
             padding:  5px 20px;
             border-radius: 5px;
-        }
-
-        .project{
-            padding: 0 15%;
         }
         .technos{
             background: rgb(105, 104, 105);
@@ -78,29 +72,65 @@ $text-dark: #c4c8ca96;
             font-weight: 500;
         }
         .card-body{
-            min-height: 30em;
+            min-height: 25em;
+            position: relative;
+            padding: 0;
           }
           ///////////////////////////////////// END CARD PROJECT  ////////////////////////////////////////////
 
 
         ////////////////// lIST NAVIGATION PROJECTPAGE//////////////////////
+       /* Styles par défaut pour desktop */
+.nav-project {
+    padding: 4em 10em 0 10em !important;
+    margin-bottom: -17px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Styles pour mobile (largeur max de 768px) */
+@media (max-width: 768px) {
+    .nav-project {
+        padding: 4em 0 0 0 !important; /* Supprime le padding horizontal */
+        margin-bottom: -17px;          /* Garde le margin-bottom pour le placement */
+        margin-top: -45px;
+        button, a {
+            margin-bottom: 10px !important; /* Supprime le padding horizontal */
+        }
+    }
+    .nav-project button:first-child {
+        margin-left: 0 !important; /* Supprime toute marge gauche */
+    }
+    
+    /* Décale verticalement la ligne de défilement en mobile */
+    .nav-project::-webkit-scrollbar {
+        height: 2px; /* Ajustez la hauteur selon vos préférences */
+        margin-top: 1rem;
+    }
+    .nav-project::-webkit-scrollbar-thumb {
+        background-color: #ccc; /* Couleur de la barre de défilement */
+        border-radius: 2px;     /* Coin arrondi */
+    }
+    
+}
+
         .tab-list-item {
             margin: 0px 1rem 0px 0px;
-            font-size: 1.1rem; /* Réduction de la taille de police en rem */
+            font-size: 16px; /* Réduction de la taille de police en rem */
             transition: 0.3s;
             background: transparent;
             color: #c6c6c6;
             border: none;
-            font-weight: 600;
+            font-weight: 400;
         }
         
         .tab-list-active {
             margin: 0 2rem;
-            font-size: 1.5rem; /* Réduction de la taille de police en rem */
+            font-size: 18px; /* Réduction de la taille de police en rem */
             color: rgb(232, 232, 232);
             background: #343A40;
-            padding: 5px 22px;
-            font-weight: 900 !important;
+            padding: 3px 22px;
+            font-weight: 700 !important;
             border: none;
             border-radius: 5px;
         }
@@ -109,9 +139,10 @@ $text-dark: #c4c8ca96;
 ///////////////////////////// SIDEBAR ///////////////////////////////////////////////
         .sidebar-project{
             background-color: #020a13;
-            width: 37rem !important;
+            width: 30rem !important;
             color: white;
-        }
+        //     z-index: 1000;
+         }
         .img-sidebar{
             margin-top: 2rem;
             margin-bottom: 2rem;

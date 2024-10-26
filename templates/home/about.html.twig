@@ -1,49 +1,121 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}About{% endblock %}
-    {% block stylesheets %}
-		{{ parent()}}
-		{{ encore_entry_link_tags('about') }}
-	{% endblock %}
-	
-	{% block javascripts %}
-		{{ parent()}}
-		{{ encore_entry_script_tags('about') }}
-	{% endblock %}
+{% block title %}About
+{% endblock %}
+{% block stylesheets %}
+	{{ parent()}}
+	{{ encore_entry_link_tags('about') }}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent()}}
+	{{ encore_entry_script_tags('about') }}
+{% endblock %}
 {% block body %}
-    <div class="container mt-4">
-        <div class="d-flex align-items-start justify-content-start">
-            <h1 class="custom-title">About Me</h1>
-        </div>
-    </div>
-    
-    <div class="container mt-5 custom-container-about">
-        <div class="row">
-            <!-- Première colonne -->
-            <div class="col-md-10">
-                {# <h3 class="h3-about">Who I am</h3> #}
-                <ul class="timeline">
-                    <li class="mt-2">
-                        <a href="#">Who I am</a>
-                        <p>
-                            My name is Mouhamed Diop and I'm a passionate full-stack developer. After obtaining my scientific baccalauréat and a degree in chemistry, I decided to follow my passion for computing and turned to web development.
-                    I've had the opportunity to work on various projects involving different technologies, such as PHP with its Symfony framework, JavaScript, and Tailwind CSS... These experiences have enabled me to acquire solid expertise in the field of web development.
-                    By working with major companies such as Emaus Connect and the AFAC Île de la Réunion association, I've been able to put my skills into practice and come up with effective solutions.
-                    Today, I'm delighted when I'm writing lines of code, because it allows me to express my creativity and contribute to the realisation of concrete projects.
-                        </p>
-                    </li>
-                    <li class="mt-2">
-                        <a href="#">Educations</a>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu eu venenatis consectetur. Aliquam volutpat, nibh ac pulvinar aliquet, tellus sem scelerisque justo, vitae consequat lorem dolor at justo. Fusce vel felis sit amet nisl tincidunt congue vitae non lorem. Quisque et tortor ultrices, cursus nunc id, finibus mauris. Sed maximus, elit id malesuada tincidunt, felis velit hendrerit velit, in tristique urna diam nec ex. Sed eget posuere lacus. Sed hendrerit, justo at.
-                        </p>
-                    </li>
-                    <li class="mt-2">
-                        <a href="#">Professional experience</a>
-                        <p>
-                            As a web developer at @Wild Code School, I've had the opportunity to work on three exciting projects. Firstly, I contributed to the development of an immersive art gallery application for the AFAC association, showcasing works of art with a view to the 2023 European Heritage Days. This application also includes an admin interface dedicated to managing exhibitions and works of art. Next, I took part in the creation of a dynamic website for station networks, displaying trains and timetables departing from each station, while integrating user accounts and an admin interface for CRUD operations. Finally, I created a website for a fictitious professional photographer, with the aim of developing his reputation. The site, designed in HTML, CSS and JavaScript, aims to showcase the photographer's work and offer visitors a captivating experience.
-                        </p>
-                    </li>
-                </ul>
-            </div>
+	{# <div class="container mt-4">
+		        
+		    </div> #}
+
+     <div class="container my-5 px-3 px-lg-5">
+		<div class="row ml-lg-8rem">
+			<!-- Première colonne -->
+			<div class="col-md-10 col-about">
+				<div class="d-flex align-items-start justify-content-start pb-5">
+					<h1 class="intro_text">About Me</h1>
+				</div>
+				{# <h3 class="h3-about">Who I am</h3> #}
+				<ul class="timeline">
+					<li class="mt-2">
+						<a href="#">Who I am</a>
+						<p>
+							My name is Mouhamed Diop and I'm a passionate full-stack developer. After obtaining my scientific baccalauréat and a degree in chemistry, I decided to follow my passion for computing and turned to web development.
+														                    I've had the opportunity to work on various projects involving different technologies, such as PHP with its Symfony framework, JavaScript, and Tailwind CSS... These experiences have enabled me to acquire solid expertise in the field of web development.
+														                    By working with major companies such as Emaus Connect and the AFAC Île de la Réunion association, I've been able to put my skills into practice and come up with effective solutions.
+														                    Today, I'm delighted when I'm writing lines of code, because it allows me to express my creativity and contribute to the realisation of concrete projects.
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Educations</a>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu eu venenatis consectetur. Aliquam volutpat, nibh ac pulvinar aliquet, tellus sem scelerisque justo, vitae consequat lorem dolor at justo. Fusce vel felis sit amet nisl tincidunt congue vitae non lorem. Quisque et tortor ultrices, cursus nunc id, finibus mauris. Sed maximus, elit id malesuada tincidunt, felis velit hendrerit velit, in tristique urna diam nec ex. Sed eget posuere lacus. Sed hendrerit, justo at.
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Professional experience</a>
+						<p>
+							As a web developer at @Wild Code School, I've had the opportunity to work on three exciting projects. Firstly, I contributed to the development of an immersive art gallery application for the AFAC association, showcasing works of art with a view to the 2023 European Heritage Days. This application also includes an admin interface dedicated to managing exhibitions and works of art. Next, I took part in the creation of a dynamic website for station networks, displaying trains and timetables departing from each station, while integrating user accounts and an admin interface for CRUD operations. Finally, I created a website for a fictitious professional photographer, with the aim of developing his reputation. The site, designed in HTML, CSS and JavaScript, aims to showcase the photographer's work and offer visitors a captivating experience.
+						</p>
+					</li>
+				</ul>
+				<div class="d-flex align-items-start justify-content-start pb-3">
+					<h1 class="intro_text_2">My Reads.</h1>
+				</div>
+				<ul class="timeline">
+					<li class="mt-2">
+						<a href="#">Human Centered Design 101. Acumen</a>
+						<p>
+							This is an intensive, hands-on learning experience that will challenge you to get out of your chair and out into the real world to talk to people and test your ideas. You’ll leave this experience equipped and energized to apply the human-centered design process to challenges across industries, sectors, and geographies to generate breakthrough ideas.</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Data Structure And Algorithm. Udemy</a>
+						<p>
+							Many developers who are "self taught", feel that one of the main disadvantages they face compared to college educated graduates in computer science is the fact that they don't have knowledge about algorithms, data structures and the notorious Big-O Notation
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Adaptive Leadership. edX</a>
+						<p>
+							This introductory course helps you identify and make progress on a leadership challenge in your own life, team, or community. You’ll apply the tools and techniques of Adaptive Leadership, a practical framework developed at Harvard Kennedy School of Government for leading change, particularly during times of uncertainty or when there are no easy answers.
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Learning to Learn [Efficient Learning] udemy</a>
+						<p>
+							Improve memory & productivity using the skills of the world's top performers and learning strategies proven by research.
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Learning Something Great 😉</a>
+						<p>
+							We continue learning everyday.
+						</p>
+					</li>
+				</ul>
+				<div class="d-flex align-items-start justify-content-start pb-3">
+					<h1 class="intro_text_2">My Playlist..</h1>
+				</div>
+				<ul class="timeline">
+					<li class="mt-2">
+						<a href="#">Mouhamed.spotify</a>
+						<p>
+							This is an intensive, energizing songs list that helps me through the day and inspires generate breakthrough ideas.</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Chill Lofi Study Beats</a>
+						<p>
+							The perfect study beats, twenty four seven. with over 178 SONGS
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Mellow Drive Spotify</a>
+						<p>
+							Easy listening for pleasant drive
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Rap UK Spotify</a>
+						<p>
+							One of the finest rap in UK. Cover: Aitch
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Mood Booster. Spotify</a>
+						<p>
+							Get happy with today's dose of feel-good songs!
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 {% endblock %}

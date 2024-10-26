@@ -132,7 +132,9 @@ body::before {
 .footer p{
     color: $text-light;
 }
-
+// .footer{
+//     z-index: 1000;
+// }
 @keyframes move-arrow {
     0% {
         transform: translateX(0); /* Position initiale */
@@ -154,6 +156,26 @@ body::before {
   .social-media svg:hover {
     transform: scale(1.2); /* Zoom à 120% */
   }
+  /* Fixation en bas de l'écran en mobile uniquement */
+@media (max-width: 768px) {
+    .social-media {
+        position: fixed;
+        bottom: 0;
+        left: -9px;
+        right: 0;
+        // display: flex;
+        // justify-content: space-around;
+        background-color: rgba(48, 39, 39, 0.8); /* Fond semi-transparent */
+        // padding: 10px 0;
+        z-index: 1000; /* S'assurer que ça reste visible */
+    }
+    .social-media a {
+        flex: 1; /* Chaque icône occupe une part égale de l'espace */
+        text-align: center; /* Centre les icônes horizontalement */
+        padding: 10px; /* Padding autour des icônes */
+        margin: 0;
+    }
+}
   ///////////////////////////// END FOOTER ////////////////////////////////////////////
 
 /////////////////// Textes COLOR///////////////////
@@ -188,12 +210,12 @@ body::before {
     width: auto !important;
 }
 
-.custom-title{
-    font-size: 4.075vw;
-    font-weight: 900;
-    margin: 4rem 0rem 1.5rem;
-    color: $text-light;
-}
+// .custom-title{
+//     font-size: 4.075vw;
+//     font-weight: 900;
+//     margin: 4rem 0rem 1.5rem;
+//     color: $text-light;
+// }
 
 // .custom-presentation p{
 //     padding-left: 2em;

@@ -5,16 +5,48 @@ $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
  /* Global Styles for About Page */
- .custom-container-about {
-    position: relative;
-    padding-left: 6%!important;
-    // padding-right: 7% !important;
+//  .custom-container-about {
+//     position: relative;
+//     padding-left: 6%!important;
+//     // padding-right: 7% !important;
+// }
+// .row {
+//     margin-left: 7rem !important;
+//     // padding-right: 0px !important;
+// }
+@media (min-width: 992px) {
+    .ml-lg-8rem {
+        margin-left: 8rem;
+    }
 }
 
-.custom-title {
+.col-about {
+    padding-left: 0 !important;
+}
+// @media (min-width: 992px) { /* Pour les écrans larges (lg) et plus */
+//     .row {
+//         padding-left: 3rem !important;
+//         padding-right: 3rem !important;
+//     }
+// }
+
+// @media (min-width: 768px) {
+//     .row {
+//         padding-left: 100px !important;
+//     }
+// }
+.intro_text {
     font-size: 3rem;
     font-weight: 700;
     color: #e1e1e1;
+    margin-left: 10px !important;
+}
+.intro_text_2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #e1e1e1;
+    padding-left: 10px !important;
+    
 }
 
 .h3-about {
@@ -27,9 +59,9 @@ $text-dark: #c4c8ca96;
 /* Timeline Styles */
 ul.timeline {
     position: relative;
-    padding-left: 40px;
+    padding-left: 28px;
     list-style: none;
-    padding-bottom: 20px;
+    padding-bottom: 44px;
 }
 
 ul.timeline::before {
@@ -56,7 +88,7 @@ ul.timeline li::before {
     position: absolute;
     border-radius: 50%;
     border: 2px solid #e1e1e1; /* Border for the circle */
-    left: -36px; /* Position the circle correctly */
+    left: -24px; /* Position the circle correctly */
     top: 8px; /* Adjust based on the vertical alignment */
     width: 17px;
     height: 17px;
