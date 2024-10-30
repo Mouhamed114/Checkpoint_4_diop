@@ -1,6 +1,9 @@
 // Variables
 $primary-bg: #1b0927;
 $secondary-bg: #845EC2;
+$primary-color: #FFFFFFCC;
+$secondary-color: #e1e1e1;
+$tertiary-color: #c6c6c6;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
@@ -21,12 +24,12 @@ $text-dark: #c4c8ca96;
 .intro__text {
     font-size: 3rem;
     font-weight: 700;
-    color: #e1e1e1;
+    color: $secondary-color;
     padding-top: 22px;
 }
-// b{
-//     font-weight: bolder !important;
-// }
+b{
+    color: $secondary-color !important;
+}
 
 /* Paragraph under title */
 .intro-paragraph {
@@ -34,7 +37,7 @@ $text-dark: #c4c8ca96;
     margin-top: 2.6rem;
     line-height: 2;
     font-weight: 400;
-    color: #c6c6c6 !important;
+    color: $tertiary-color !important;
 }
 
 /* Form fields */
@@ -60,7 +63,7 @@ $text-dark: #c4c8ca96;
     margin-top: 0.6rem;
     margin-bottom: 3rem;
     padding: 15px 40px;
-    background-color: #e1e1e1;
+    background-color: $secondary-color;
     color: #020a13;
     border: none;
     border-radius: 0.25rem;
@@ -75,7 +78,7 @@ input, textarea {
     resize: none;
     // margin-bottom: 2rem;
     border-radius: 5px; /* Arrondir les coins si nécessaire */
-    color: #e1e1e1 !important; /* Couleur du texte */
+    color: $secondary-color !important; /* Couleur du texte */
     font-size: 16px; /* Taille du texte */
     border-color: #282d32 !important;
 }

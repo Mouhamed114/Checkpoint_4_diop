@@ -2,6 +2,9 @@
 // Variables
 $primary-bg: #1b0927;
 $secondary-bg: #845EC2;
+$primary-color: #FFFFFFCC;
+$secondary-color: #e1e1e1;
+$tertiary-color: #c6c6c6;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
@@ -14,10 +17,11 @@ $text-dark: #c4c8ca96;
 .col-contact {
     padding-left: 0 !important;
 }
-.intro_text {
+.intro__text {
     font-size: 3rem;
     font-weight: 700;
-    color: #e1e1e1;
+    color: $secondary-color;
+    // padding-top: 22px;
 }
 ///////////////////////////////////// CARD PROJECT  ////////////////////////////////////////////
         .card-text,
@@ -49,7 +53,7 @@ $text-dark: #c4c8ca96;
         }
         
         .card.h-100.d-flex.flex-column.custom-card:hover .description-card-hover {
-            color: white;
+            color: $primary-color;
             opacity: 1;
             background-color: rgba(0, 0, 0, .69);
         }
@@ -76,7 +80,17 @@ $text-dark: #c4c8ca96;
             position: relative;
             padding: 0;
           }
-          ///////////////////////////////////// END CARD PROJECT  ////////////////////////////////////////////
+        //   /* Pour les écrans de taille mobile */
+        //   @media (max-width: 768px) {
+        //     .description-card-hover {
+        //         display: block !important;
+        //         opacity: 1 !important; /* Assure une visibilité complète */
+        //         position: relative !important;
+        //         z-index: 100; /* Met la description au-dessus des autres éléments */
+        //     }
+        // }
+        
+            ///////////////////////////////////// END CARD PROJECT  ////////////////////////////////////////////
 
 
         ////////////////// lIST NAVIGATION PROJECTPAGE//////////////////////
@@ -119,7 +133,7 @@ $text-dark: #c4c8ca96;
             font-size: 16px; /* Réduction de la taille de police en rem */
             transition: 0.3s;
             background: transparent;
-            color: #c6c6c6;
+            color: $tertiary-color;
             border: none;
             font-weight: 400;
         }
@@ -140,7 +154,7 @@ $text-dark: #c4c8ca96;
         .sidebar-project{
             background-color: #020a13;
             width: 30rem !important;
-            color: white;
+            color: $primary-color;
         //     z-index: 1000;
          }
         .img-sidebar{
@@ -153,11 +167,16 @@ $text-dark: #c4c8ca96;
             font-size: 0,875em;
             color: #3f566e;
         }
+        // .description-sidebar{
+        //     line-height: 2;
+        // }
         hr{
             margin-top: -14px;
         }
         .list-inline-sidebar{
             display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
             list-style: none;
             padding-left: 0;
         }
@@ -184,7 +203,7 @@ $text-dark: #c4c8ca96;
         }
         .techno-sidebar{
             background-color: #13283e;
-            padding: 6px 21px;
+            padding: 4px 16px;
             border-radius: 4px;
             text-transform: capitalize;
             font-size: 15px;
@@ -192,4 +211,12 @@ $text-dark: #c4c8ca96;
             color: #e1e1e1;
             font-weight: bold;
         }
+        // .list-inline-sidebar {
+        //     display: flex;
+        //     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+        //     gap: 10px; /* Espacement entre les technologies */
+        //     padding: 0;
+        //     margin: 0;
+        //     list-style-type: none; /* Supprime les puces des éléments de liste */
+        // }
         ////////////////////////    END SIDEBAR   ////////////////////////////////////////////////////

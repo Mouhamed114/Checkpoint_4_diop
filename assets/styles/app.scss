@@ -3,8 +3,12 @@
 // Variables
 $primary-bg: #1b0927;
 $secondary-bg: #845EC2;
+$primary-color: #FFFFFFCC;
+$secondary-color: #e1e1e1;
+$tertiary-color: #c6c6c6;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
+$text-bg: #1c2a2e;
 
 // Styles
 html, body {
@@ -12,26 +16,46 @@ html, body {
     margin: 0; /* Supprime les marges par défaut */
     padding: 0; /* Supprime les paddings par défaut */
     overflow-x: hidden; /* Évite le défilement horizontal */
+    font-family: 'Roboto', sans-serif !important;
 }
-// .rotated-text {
-//     font-family: 'Courier New', Courier, monospace; /* Choix d'une police intéressante */
-//     font-size: 12rem;
-//     color: whitesmoke;
-//     transform: rotate(90deg); /* Retourner le texte */
-//     position: fixed;
-//     bottom: 8%; /* Partir du bas */
-//     left: 14%; /* Centrer horizontalement */
-//     transform: translateX(-50%) rotate(90deg); /* Ajustement pour un bon centrage et rotation */
-//     z-index: 0; /* Derrière le fond violet */
-//     opacity: 0.1; /* Transparence légère */
-//     height: 75vh; /* Prendre les 3/4 de la hauteur de l'écran */
-//     display: flex;
-//     align-items: flex-end; /* Aligner le texte vers le bas */
-//     justify-content: start;
-// }
+.rotated-text {
+    // font-family: 'Courier New', Courier, monospace; 
+    font-size: 11rem; /* Taille de police par défaut */
+    color: $text-bg; 
+    // transform: rotate(90deg); /* Rotation du texte */
+    position: fixed; 
+    // bottom: 8%; /* Espace depuis le bas */
+    // left: 0; /* Collé à gauche */
+    transform: translateY(0) rotate(90deg); /* Ajustement pour aligner à gauche */
+    z-index: -2; 
+    opacity: 0.2; /* Transparence légère */
+    height: 85vh; /* Prend 75% de la hauteur de l'écran */
+    display: flex;
+    align-items: flex-end; /* Alignement vertical */
+    font-weight: 900;
+    // justify-content: start; /* Alignement horizontal */
+}
+
+/* Ajuster la taille du texte pour les écrans plus petits */
+@media (max-width: 768px) {
+    .rotated-text {
+        display: none;
+    }
+}
+.img-home{
+    max-width: 30%;
+    height: auto;
+}
+
 body {
     /* Fond blanc de base */
-    background-color: white;
+    background: linear-gradient(
+        to bottom right, /* Direction du dégradé */
+        yellow -550%,       /* Couleur jaune en haut à gauche */
+        #031120 30%,     /* Transition vers la couleur principale (30% du chemin) */
+        #061425 60%,     /* Couleur principale jusqu’à 70% */
+        yellow 550%      /* Couleur jaune en bas à droite */
+    );;
     
     /* S'assurer que l'élément occupe tout l'espace visible */
     margin: 0;
@@ -47,16 +71,54 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    
-    /* Les carreaux avec des lignes plus grandes et un zoom appliqué */
-    background: linear-gradient(rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 120px 110px, 
-                linear-gradient(to right, rgba(113, 113, 113, 0.07) 1px, transparent 1px) 0% 0% / 120px 110px;
-    
-    /* Couleur violette semi-transparente par-dessus */
-    background-color: #131720; /* Violet avec 80% d'opacité */
+    color: rgba(113, 113, 113, 0.07);
+    transition: 0.5s linear;
+
+       /* Les carreaux avec des lignes verticales et horizontales */
+background: 
+/* Lignes horizontales */
+linear-gradient(currentcolor 1px, transparent 1px) 0% 0% / 94px 90px,
+/* Lignes verticales */
+linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
+
     
     /* S'assurer que le pseudo-élément est en arrière-plan */
     z-index: -1;
+}
+.intro_text{
+    font-size: 2vw;
+    font-weight: 500;
+    // text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $secondary-color;
+}
+
+.text-home{
+    color: $tertiary-color;
+    margin-top: 2rem;
+    line-height: 2.3;
+  }
+  .text-home-2{
+    color: $tertiary-color;
+    margin-top: 1rem;
+    line-height: 2.3;
+  }
+.col-home {
+    padding-left: 0 56px;
+}
+@media (min-width: 992px) {
+    .ml-lg-8rem {
+        margin-left: 8rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    .intro_text {
+        font-size: 4vw;
+    }
+    // .text-home{
+    //     margin-top: 2rem;
+    //   }
 }
 
 .navbar, .footer {
@@ -79,17 +141,30 @@ body::before {
     transform: translateX(-50%);
 }
 .container-fluid {
-    padding: 60px 325px; // Padding pour desktop
+    padding: 50px 220px; // Padding pour desktop
 }
 
 // Media query pour les écrans mobiles (moins de 768px)
 @media (max-width: 768px) {
     .container-fluid {
-        padding: 12px 35px; // Padding pour mobile
+        padding: 12px 15px; // Padding pour mobile
     }
 
     .navbar {
         padding: 12px 0; // Padding pour la navbar sur mobile (ou ajustez selon besoin)
+    }
+}
+@media (max-width: 768px) {
+    .navbar-brand svg {
+        width: 30px; /* Réduction pour les tablettes et petits écrans */
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand svg {
+        width: 20px; /* Réduction supplémentaire pour les écrans mobiles */
+        height: 30px;
     }
 }
 .navbar-toggler-icon {
@@ -98,39 +173,49 @@ body::before {
 .nav-link {
     position: relative;
     text-decoration: none;
-    color: $text-light;
-    padding-bottom: 5px;
+    color: $primary-color;
+    // padding-bottom: 5px;
     transition: color 0.3s ease-in-out;
+    // font-family: 'Roboto', sans-serif !important;
+    font-size: 20px;
+    padding: 8px 15px !important;
 }
 
-/* Pseudo-élément pour ajouter la ligne de soulignement sous chaque lien, mais PAS les SVG */
-.nav-link::after {
+/* Pseudo-élément pour ajouter la ligne de soulignement sous chaque lien texte, mais PAS les SVG */
+.nav-link span::after {
     content: "";
     position: absolute;
     width: 0;  /* Initialement invisible */
     height: 1px;
     bottom: 0;
     left: 50%;  /* Ligne commence au milieu */
-    background-color: $text-light;  /* Couleur de la ligne de soulignement */
+    background-color: $primary-color; /* Couleur de la ligne de soulignement */
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 /* Lorsque le texte du lien (span) est survolé, la ligne s'étend */
-.nav-link:hover::after {
+.nav-link span:hover::after {
     width: 100%;  /* Réduire la largeur à 50% */
     left: 0%;  /* Centrer la ligne */
 }
+
+/* Désactiver toute animation ou effet de survol sur le SVG */
+.nav-link svg:hover {
+    fill: currentColor; /* Assurer que la couleur reste inchangée au survol */
+    transition: none; /* Supprimer les transitions sur le SVG */
+}
+
 ///////////////////////////// END NAVBAR ////////////////////////////////////
 
 
 //////////////   fOOTER   ///////////
 .social-media svg {
     transition: none;  /* Aucune animation ou effet de transition */
-    fill: $text-dark;
+    fill: $tertiary-color;
     transition: transform 0.3s ease;
 }
 .footer p{
-    color: $text-light;
+    color: $secondary-color;
 }
 // .footer{
 //     z-index: 1000;
@@ -147,8 +232,19 @@ body::before {
     }
 }
 .footer svg {
-    fill: $text-light;
+    fill: $tertiary-color;
     animation: move-arrow 1s infinite ease-in-out; /* Animation infinie */
+}
+
+.text-start {
+    margin-left: 11rem !important;
+}
+
+/* Supprime le margin-left en dessous de 768px (taille typique des mobiles) */
+@media (max-width: 768px) {
+    .text-start {
+        margin-left: 0 !important;
+    }
 }
 
 
@@ -165,7 +261,7 @@ body::before {
         right: 0;
         // display: flex;
         // justify-content: space-around;
-        background-color: rgba(48, 39, 39, 0.8); /* Fond semi-transparent */
+        background-color: #07121dd4; /* Fond semi-transparent */
         // padding: 10px 0;
         z-index: 1000; /* S'assurer que ça reste visible */
     }
@@ -179,31 +275,28 @@ body::before {
   ///////////////////////////// END FOOTER ////////////////////////////////////////////
 
 /////////////////// Textes COLOR///////////////////
-.label-form{
-    margin-bottom: 17px;
-    color: $text-dark;
-  }
-  .text-contact{
-    color: $text-dark;
-  }
+// .label-form{
+//     margin-bottom: 17px;
+//     color: $text-dark;
+//   }
+//   .text-contact{
+//     color: $text-dark;
+//   }
 
-  .text-footer{
-    color: $text-dark;
-  }
-  .text-home{
-    color: $text-dark;
-  }
-  .text-about{
-    color: $text-dark;
-    font-weight: 500;
-    font-size: larger;
-  }
+//   .text-footer{
+//     color: $text-dark;
+//   }
+
+//   .text-about{
+//     color: $text-dark;
+//     font-weight: 500;
+//     font-size: larger;
+//   }
   ////////////////////////////////////////////////////////
- .nav-link{
-    font-family: emoji;
-    font-size: 22px;
-    padding: 8px 15px !important;
-    }
+//  .nav-link{
+//     font-size: 22px;
+//     padding: 8px 15px !important;
+    // }
 
 .containers {
     margin: 0 5%;
@@ -222,10 +315,10 @@ body::before {
 //     margin-bottom: 0px;
 // }
 
-.custom-border{
-    border-left: 3px solid;
-     margin-left: -2px;
-}
+// .custom-border{
+//     border-left: 3px solid;
+//      margin-left: -2px;
+// }
 
 // .h3-about {
 //     display: inline-block;
@@ -321,24 +414,24 @@ body::before {
 //   }
 
 ////////////////////// MEDIA QUERIES ///////////////
-@media only screen and (max-width: 1200px) {
-    .custom-contact-rs .custom-svg a span{
-        display: none;
-    }
+// @media only screen and (max-width: 1200px) {
+//     .custom-contact-rs .custom-svg a span{
+//         display: none;
+//     }
 
-    .custom-container-about .para_title p {
-        border-left: 1px solid black;
-    }
-    .custom-svg{
-        margin-left: 26px;
-        margin-top: 26px;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .custom-border {
-        border-left: 0px solid;
-    }
-  }
+//     .custom-container-about .para_title p {
+//         border-left: 1px solid black;
+//     }
+//     .custom-svg{
+//         margin-left: 26px;
+//         margin-top: 26px;
+//     }
+//   }
+//   @media only screen and (max-width: 768px) {
+//     .custom-border {
+//         border-left: 0px solid;
+//     }
+//   }
 
 
 
@@ -365,3 +458,5 @@ body::before {
 //     z-index: 99;
 //     transition: transform 0.1s ease;
 // }
+
+

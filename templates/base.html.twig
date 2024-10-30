@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}"/>
-        <link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
         <title>
             {% block title %}Projet 3 Name{% endblock %}
         </title>
@@ -18,9 +19,19 @@
     </head>
     <body>
         {% include 'includes/_navbar.html.twig' %}
-            {# <div class="rotated-text">
-                Bonjour
-            </div> #}
+            <div class="rotated-text">
+                <p>
+                            {% if app.request.attributes.get('_route') == 'app_home' %}
+                                DIOP.
+                            {% elseif app.request.attributes.get('_route') == 'app_about' %}
+                                About.
+                            {% elseif app.request.attributes.get('_route') == 'app_project' %}
+                                Project.
+                            {% elseif app.request.attributes.get('_route') == 'app_contact' %}
+                                Contact.
+                            {% endif %}
+                            </p>
+            </div>
         {# Insertion des messages flash #}
         <div class="container mt-4">
             {% for type, messages in app.flashes %}

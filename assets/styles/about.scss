@@ -1,6 +1,9 @@
 // Variables
 $primary-bg: #1b0927;
 $secondary-bg: #845EC2;
+$primary-color: #FFFFFFCC;
+$secondary-color: #e1e1e1;
+$tertiary-color: #c6c6c6;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
 
@@ -35,26 +38,27 @@ $text-dark: #c4c8ca96;
 //         padding-left: 100px !important;
 //     }
 // }
-.intro_text {
+.intro__text {
     font-size: 3rem;
     font-weight: 700;
-    color: #e1e1e1;
-    margin-left: 10px !important;
+    color: $secondary-color;
+    margin-left: 12px;
+    // padding-top: 22px;
 }
 .intro_text_2 {
     font-size: 2rem;
     font-weight: 400;
-    color: #e1e1e1;
+    color: $secondary-color;
     padding-left: 10px !important;
     
 }
 
-.h3-about {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #e1e1e1;
-}
+// .h3-about {
+//     font-size: 2rem;
+//     font-weight: 700;
+//     margin-bottom: 1.5rem;
+//     color: #e1e1e1;
+// }
 
 /* Timeline Styles */
 ul.timeline {
@@ -87,14 +91,14 @@ ul.timeline li::before {
     content: " ";
     position: absolute;
     border-radius: 50%;
-    border: 2px solid #e1e1e1; /* Border for the circle */
+    border: 2px solid $secondary-color; /* Border for the circle */
     left: -24px; /* Position the circle correctly */
-    top: 8px; /* Adjust based on the vertical alignment */
+    top: 5px; /* Adjust based on the vertical alignment */
     width: 17px;
     height: 17px;
     z-index: 1; /* Place above the line */
-    background: #080f18;
-    border: 3px solid #ffffff;
+    background: #180b2d;
+    border: 3px solid $primary-color;
     // box-shadow: 0 0 0 4px #ffffff;
 }
 // ul.timeline li::after {
@@ -122,14 +126,15 @@ ul.timeline li::before {
 ul.timeline li a {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #e1e1e1;
+    color: $secondary-color;
     text-decoration: none;
 }
 
 ul.timeline li p {
-    color: #c6c6c6;
+    color: $tertiary-color;
     margin: 9.6px 0 16px;
     font-size: 1rem;
+    line-height: 2;
 }
 
 
