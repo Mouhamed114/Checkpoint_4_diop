@@ -6,7 +6,30 @@ $secondary-color: #e1e1e1;
 $tertiary-color: #c6c6c6;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
+$text-bg: #1c2a2e;
 
+.rotated-text-contact {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 18rem; /* Taille de police par défaut */
+    color: $text-bg; 
+    // transform: rotate(90deg); /* Rotation du texte */
+    position: fixed; 
+    // bottom: 8%; /* Espace depuis le bas */
+    // left: 0; /* Collé à gauche */
+    // transform: translateY(0) rotate(90deg); /* Ajustement pour aligner à gauche */
+    z-index: -2; 
+    opacity: 0.2; /* Transparence légère */
+    height: 88vh; /* Prend 75% de la hauteur de l'écran */
+    display: flex;
+    align-items: flex-end; /* Alignement vertical */
+    font-weight: 900;
+    // justify-content: start; /* Alignement horizontal */
+}
+@media (max-width: 768px) {
+    .rotated-text-contact {
+        display: none !important;
+    }
+}
 /* Container padding */
 @media (min-width: 992px) {
     .ml-lg-8rem {

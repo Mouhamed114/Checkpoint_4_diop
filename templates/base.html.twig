@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
 
         <title>
             {% block title %}Projet 3 Name{% endblock %}
@@ -19,7 +20,7 @@
     </head>
     <body>
         {% include 'includes/_navbar.html.twig' %}
-            <div class="rotated-text">
+            {# <div class="rotated-text">
                 <p>
                             {% if app.request.attributes.get('_route') == 'app_home' %}
                                 DIOP.
@@ -31,7 +32,7 @@
                                 Contact.
                             {% endif %}
                             </p>
-            </div>
+            </div> #}
         {# Insertion des messages flash #}
         <div class="container mt-4">
             {% for type, messages in app.flashes %}

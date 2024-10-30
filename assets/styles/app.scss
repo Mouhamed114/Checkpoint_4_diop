@@ -18,30 +18,31 @@ html, body {
     overflow-x: hidden; /* Évite le défilement horizontal */
     font-family: 'Roboto', sans-serif !important;
 }
-.rotated-text {
-    // font-family: 'Courier New', Courier, monospace; 
-    font-size: 11rem; /* Taille de police par défaut */
+
+.rotated-text-home {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 18rem; /* Taille de police par défaut */
     color: $text-bg; 
     // transform: rotate(90deg); /* Rotation du texte */
     position: fixed; 
     // bottom: 8%; /* Espace depuis le bas */
     // left: 0; /* Collé à gauche */
-    transform: translateY(0) rotate(90deg); /* Ajustement pour aligner à gauche */
+    // transform: translateY(0) rotate(90deg); /* Ajustement pour aligner à gauche */
     z-index: -2; 
     opacity: 0.2; /* Transparence légère */
-    height: 85vh; /* Prend 75% de la hauteur de l'écran */
+    height: 88vh; /* Prend 75% de la hauteur de l'écran */
     display: flex;
     align-items: flex-end; /* Alignement vertical */
     font-weight: 900;
     // justify-content: start; /* Alignement horizontal */
 }
-
-/* Ajuster la taille du texte pour les écrans plus petits */
 @media (max-width: 768px) {
-    .rotated-text {
-        display: none;
+    .rotated-text-home {
+        display: none !important;
     }
 }
+/* Ajuster la taille du texte pour les écrans plus petits */
+
 .img-home{
     max-width: 30%;
     height: auto;
@@ -458,5 +459,8 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
 //     z-index: 99;
 //     transition: transform 0.1s ease;
 // }
-
+// .custom-error-email {
+//     color: #77d151 !important; /* Couleur spécifique pour l'erreur d'email */
+//     font-weight: bold !important;
+// }
 
