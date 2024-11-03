@@ -6,7 +6,7 @@ $secondary-color: #e1e1e1;
 $tertiary-color: #c6c6c6;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
-$text-bg: #1c2a2e;
+$text-bg: #314a51;
 
  /* Global Styles for About Page */
  
@@ -162,3 +162,47 @@ ul.timeline li p {
 }
 
 
+
+
+
+
+
+
+
+
+// .timeline {
+//     list-style: none;
+//     padding: 0;
+// }
+
+// .timeline > li {
+//     margin-bottom: 1.5rem;
+// }
+
+// .timeline a {
+//     font-weight: bold;
+//     color: #333;
+//     text-decoration: none;
+// }
+
+// .timeline .skills-list {
+//     list-style-type: disc; /* Les puces pour les compétences */
+//     margin-left: 20px; /* Décalage pour la sous-liste */
+//     color: #555;
+//     font-size: 0.95em;
+// }
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crée des colonnes adaptatives */
+    grid-auto-rows: auto;
+    column-gap: 0px; /* Espacement entre les colonnes */
+    row-gap: 0px;    /* Espacement entre les lignes */
+    // max-height: calc(1.5em * 4 + 30px); /* Hauteur totale de 4 lignes max */
+    // overflow: hidden; /* Cache les lignes supplémentaires si elles dépassent */
+    padding-top: 10px;
+}
+
+// .skills-list li {
+//     margin: 5px 0;
+// }

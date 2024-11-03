@@ -8,7 +8,7 @@ $secondary-color: #e1e1e1;
 $tertiary-color: #c6c6c6;
 $text-light: whitesmoke;
 $text-dark: #c4c8ca96;
-$text-bg: #1c2a2e;
+$text-bg: #314a51;
 
 // Styles
 html, body {
@@ -43,10 +43,10 @@ html, body {
 }
 /* Ajuster la taille du texte pour les écrans plus petits */
 
-.img-home{
-    max-width: 30%;
-    height: auto;
-}
+// .img-home{
+//     max-width: 30%;
+//     height: auto;
+// }
 
 body {
     /* Fond blanc de base */
@@ -93,6 +93,28 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
     letter-spacing: 4px;
     color: $secondary-color;
 }
+// .intro_text::after {
+//     content: attr(data-text); /* Utilise le même texte que l'élément parent */
+//     position: absolute;
+//     left: -2px; /* Décalage léger */
+//     top: 0;
+//     color: $secondary-color !important;
+//     text-shadow: 3px 0px rgb(227, 209, 218); /* Couleur de l'ombre rose vif */
+//     animation: noise-anim 2s linear infinite alternate-reverse !important; /* Applique l'animation */
+//     opacity: 0.8 !important;
+//     // z-index: -1;
+//     background-color: yellow !important;
+// }
+
+/* Animation du "glitch" */
+// @keyframes noise-anim {
+//     0% { transform: translate(0, 0); }
+//     20% { transform: translate(-2px, -2px); }
+//     40% { transform: translate(2px, 2px); }
+//     60% { transform: translate(-2px, 2px); }
+//     80% { transform: translate(2px, -2px); }
+//     100% { transform: translate(0, 0); }
+// }
 
 .text-home{
     color: $tertiary-color;
@@ -210,6 +232,18 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
 
 
 //////////////   fOOTER   ///////////
+/// 
+.footer-link {
+    text-decoration: none;
+    color: inherit; /* Conserve la couleur du texte par défaut */
+    bottom: -2px !important;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    background-color: #3498db !important; /* Remplacez par la couleur bleue */
+}
+
 .social-media svg {
     transition: none;  /* Aucune animation ou effet de transition */
     fill: $tertiary-color;

@@ -12,28 +12,37 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbar-default"> <!-- Justifier vers la droite -->
-            <ul class="navbar-nav ms-auto"> <!-- Utilisation de ms-auto pour aligner les liens à droite -->
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ path('app_home')}}"><span class="text-white"> Home</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_about')}}"><span class="text-white"> About</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_project')}}"><span class="text-white"> Projects</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_contact')}}"><span class="text-white"> Contact</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-default">
+    <ul class="navbar-nav ms-auto">
+        {% if app.request.attributes.get('_route') != 'app_home' %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_home') }}"><span class="text-white">Home</span></a>
+            </li>
+        {% endif %}
+        {% if app.request.attributes.get('_route') != 'app_about' %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_about') }}"><span class="text-white">About</span></a>
+            </li>
+        {% endif %}
+        {% if app.request.attributes.get('_route') != 'app_project' %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_project') }}"><span class="text-white">Projects</span></a>
+            </li>
+        {% endif %}
+        {% if app.request.attributes.get('_route') != 'app_contact' %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_contact') }}"><span class="text-white">Contact</span></a>
+            </li>
+        {% endif %}
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div>
+
     </div>
 </nav>

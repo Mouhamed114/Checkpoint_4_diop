@@ -12,21 +12,21 @@ import './styles/app.scss';
 import 'bootstrap';
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const textElement = document.getElementById("animationText");
-    const text = "Hi, I'am Mouhamed 👋";
-    let index = 0;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const textElement = document.getElementById("animationText");
+//     const text = "Hi, I'am Mouhamed 👋";
+//     let index = 0;
 
-    function typeWriter() {
-        textElement.textContent += text.charAt(index);
-        index++;
-        if (index < text.length) {
-            setTimeout(typeWriter, 100);
-        }
-    }
+//     function typeWriter() {
+//         textElement.textContent += text.charAt(index);
+//         index++;
+//         if (index < text.length) {
+//             setTimeout(typeWriter, 100);
+//         }
+//     }
 
-    typeWriter();
-});
+//     typeWriter();
+// });
 
 ///////////////////////////////CURSOR//////////////////////////////
 // // Récupération des éléments HTML du point et du cercle
