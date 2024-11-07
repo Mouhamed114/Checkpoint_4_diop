@@ -91,12 +91,12 @@ $text-bg: #314a51;
         }
         .technos{
             background: rgb(105, 104, 105);
-            padding: 1px 7px;
+            padding: 4px 11px;
             border-radius: 50px;
             text-transform: capitalize;
-            font-size: 16px;
+            font-size: 12px;
             margin-right: 6px;
-            margin-bottom: 6px;
+            // margin-bottom: 6px;
 
             color: rgb(255, 255, 255);
             font-weight: 500;
@@ -193,9 +193,9 @@ $text-bg: #314a51;
             font-size: 0,875em;
             color: #3f566e;
         }
-        // .description-sidebar{
-        //     line-height: 2;
-        // }
+        .description-sidebar{
+            line-height: 2;
+        }
         hr{
             margin-top: -14px;
         }
