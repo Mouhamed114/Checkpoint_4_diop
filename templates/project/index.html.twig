@@ -12,6 +12,7 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
+                        <th scope="col">project title</th>
                         <th scope="col">Description</th>
                         <th scope="col">Link Github</th>
                         <th scope="col">Link Internet</th>
@@ -24,6 +25,7 @@
                     <tr>
                         <td>{{ project.id }}</td>
                         <td>{{ project.name }}</td>
+                        <td>{{ project.projectTitle }}</td>
                         <td>{{ project.description }}</td>
                         <td><a href="{{ project.linkGithub }}" target="_blank">{{ project.linkGithub }}</a></td>
                         <td><a href="{{ project.linkInternet }}" target="_blank">{{ project.linkInternet }}</a></td>

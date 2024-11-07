@@ -1,4 +1,53 @@
 
+// Variables
+$primary-bg: #1b0927;
+$secondary-bg: #845EC2;
+$primary-color: #FFFFFFCC;
+$secondary-color: #e1e1e1;
+$tertiary-color: #c6c6c6;
+$text-light: whitesmoke;
+$text-dark: #c4c8ca96;
+$text-bg: #314a51;
+
+.rotated-text-project {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 18rem; /* Taille de police par défaut */
+    color: $text-bg; 
+    // transform: rotate(90deg); /* Rotation du texte */
+    position: fixed; 
+    // bottom: 8%; /* Espace depuis le bas */
+    // left: 0; /* Collé à gauche */
+    // transform: translateY(0) rotate(90deg); /* Ajustement pour aligner à gauche */
+    z-index: -2; 
+    opacity: 0.2; /* Transparence légère */
+    height: 88vh; /* Prend 75% de la hauteur de l'écran */
+    display: flex;
+    align-items: flex-end; /* Alignement vertical */
+    font-weight: 900;
+    // justify-content: start; /* Alignement horizontal */
+}
+@media (max-width: 768px) {
+    .rotated-text-project {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .ml-lg-8rem {
+        margin-left: 8rem;
+    }
+}
+
+.col-contact {
+    padding-left: 0 !important;
+}
+.intro__text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $secondary-color;
+    // padding-top: 22px;
+}
+///////////////////////////////////// CARD PROJECT  ////////////////////////////////////////////
         .card-text,
         .card-title,
         .list-inline-item {
@@ -6,7 +55,6 @@
             opacity: 0;
             transition: visibility 0s, opacity 0.3s;
         }
-
        
         .custom-card:hover .card-text,
         .custom-card:hover .card-title,
@@ -14,8 +62,6 @@
             visibility: visible;
             opacity: 1;
         }
-
-       
         .custom-card:hover {
             transform: scale(1.05); 
             z-index: 1; 
@@ -26,52 +72,117 @@
         }
 
         .card.h-100.d-flex.flex-column.custom-card {
-            min-height: 300px;
             background-size: cover;
+            background-position: center;
         }
         
-        .project .card-body {
-            padding: 0;
-        }
-        
-        .project .card.h-100.d-flex.flex-column.custom-card:hover .mt-auto {
-            color: white;
+        .card.h-100.d-flex.flex-column.custom-card:hover .description-card-hover {
+            color: $primary-color;
             opacity: 1;
             background-color: rgba(0, 0, 0, .69);
         }
         
-        .project .mt-auto {
-            position: fixed;
+        .description-card-hover {
+            position: absolute;
             bottom: 0;
             width: 100%;
-
             padding:  5px 20px;
-        }
-
-        .project .custom-card {
-            border-radius: 0;
-        }
-
-        .custom-title{
-            font-size: 36px;
-            font-family: 'Kavoon';
+            border-radius: 5px;
         }
         .technos{
             background: rgb(105, 104, 105);
-            padding: 4px 10px;
+            padding: 4px 11px;
             border-radius: 50px;
             text-transform: capitalize;
-            font-size: 16px;
+            font-size: 12px;
             margin-right: 6px;
+            // margin-bottom: 6px;
+
             color: rgb(255, 255, 255);
             font-weight: 500;
         }
+        .card-body{
+            min-height: 25em;
+            position: relative;
+            padding: 0;
+          }
+        //   /* Pour les écrans de taille mobile */
+        //   @media (max-width: 768px) {
+        //     .description-card-hover {
+        //         display: block !important;
+        //         opacity: 1 !important; /* Assure une visibilité complète */
+        //         position: relative !important;
+        //         z-index: 100; /* Met la description au-dessus des autres éléments */
+        //     }
+        // }
+        
+            ///////////////////////////////////// END CARD PROJECT  ////////////////////////////////////////////
 
+
+        ////////////////// lIST NAVIGATION PROJECTPAGE//////////////////////
+       /* Styles par défaut pour desktop */
+.nav-project {
+    padding: 4em 10em 0 10em !important;
+    margin-bottom: -17px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Styles pour mobile (largeur max de 768px) */
+@media (max-width: 768px) {
+    .nav-project {
+        padding: 4em 0 0 0 !important; /* Supprime le padding horizontal */
+        margin-bottom: -17px;          /* Garde le margin-bottom pour le placement */
+        margin-top: -45px;
+        button, a {
+            margin-bottom: 10px !important; /* Supprime le padding horizontal */
+        }
+    }
+    .nav-project button:first-child {
+        margin-left: 0 !important; /* Supprime toute marge gauche */
+    }
+    
+    /* Décale verticalement la ligne de défilement en mobile */
+    .nav-project::-webkit-scrollbar {
+        height: 2px; /* Ajustez la hauteur selon vos préférences */
+        margin-top: 1rem;
+    }
+    .nav-project::-webkit-scrollbar-thumb {
+        background-color: #ccc; /* Couleur de la barre de défilement */
+        border-radius: 2px;     /* Coin arrondi */
+    }
+    
+}
+
+        .tab-list-item {
+            margin: 0px 1rem 0px 0px;
+            font-size: 16px; /* Réduction de la taille de police en rem */
+            transition: 0.3s;
+            background: transparent;
+            color: $tertiary-color;
+            border: none;
+            font-weight: 400;
+        }
+        
+        .tab-list-active {
+            margin: 0 2rem;
+            font-size: 18px; /* Réduction de la taille de police en rem */
+            color: rgb(232, 232, 232);
+            background: #343A40;
+            padding: 3px 22px;
+            font-weight: 700 !important;
+            border: none;
+            border-radius: 5px;
+        }
+         ////////////////// END lIST NAVIGATION PROJECTPAGE   /////////////////////////
+         
+///////////////////////////// SIDEBAR ///////////////////////////////////////////////
         .sidebar-project{
             background-color: #020a13;
-            width: 37rem !important;
-            color: white;
-        }
+            width: 30rem !important;
+            color: $primary-color;
+        //     z-index: 1000;
+         }
         .img-sidebar{
             margin-top: 2rem;
             margin-bottom: 2rem;
@@ -82,11 +193,16 @@
             font-size: 0,875em;
             color: #3f566e;
         }
+        .description-sidebar{
+            line-height: 2;
+        }
         hr{
             margin-top: -14px;
         }
         .list-inline-sidebar{
             display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
             list-style: none;
             padding-left: 0;
         }
@@ -113,7 +229,7 @@
         }
         .techno-sidebar{
             background-color: #13283e;
-            padding: 6px 21px;
+            padding: 4px 16px;
             border-radius: 4px;
             text-transform: capitalize;
             font-size: 15px;
@@ -121,3 +237,12 @@
             color: #e1e1e1;
             font-weight: bold;
         }
+        // .list-inline-sidebar {
+        //     display: flex;
+        //     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+        //     gap: 10px; /* Espacement entre les technologies */
+        //     padding: 0;
+        //     margin: 0;
+        //     list-style-type: none; /* Supprime les puces des éléments de liste */
+        // }
+        ////////////////////////    END SIDEBAR   ////////////////////////////////////////////////////

@@ -3,43 +3,57 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-     
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+    <div class="rotated-text-home">
+        <p>
+                  
+                        DIOP.
+            
+                    </p>
+    </div>
+<div class="container my-5 px-3 px-lg-5">
+    <div class="row ml-lg-8rem">
+        <div class="col-md-10 col-home">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                {# <img src="{{ asset('build/images/dev.webp') }}" class="img-home img-fluid mb-3" alt="Image de présentation"> #}
                 <div class="row mb-3">
-                    <div class="col custom-title text-center" id="animationText">
-                        
-                    </div>
+                    <div class="glitch-container">
+    <span class="glitch-text" data-text="Hi, I'm Mouhamed DIOP">Hi, I'm Mouhamed DIOP 👋</span>
+</div>
+
                 </div>
-                 
+                
+
                 <div class="row">
                     <div class="col custom-presentation">
-                        <p class="text-justify text-home">Welcome to my portfolio ! I'm a passionate fullstack developer. </p>
-                        <p class="custom-border text-justify text-home">My goal is to paint the canvas of the internet with exciting projects and lines of code, turning zeros and ones into immersive and interactive web experiences. When I'm not creating beautiful web experiences, you can find me reading articles about web development or being carried away by the captivating melodies of music.
-                            Explore my portfolio to discover my web projects and experiences. </p>
-                        <p class="text-justify text-home">Don't hesitate to contact me if you'd like to know more about my work or to discuss exciting collaborations. Thank you for visiting!</p>
+                        <p class="text-justify text-home">
+                            Welcome to my portfolio ! I'm a passionate fullstack developer. My goal is to paint the canvas of the internet with exciting <a class="text-white" aria-label="Go to Projects Page" href="/projects">PROJECT</a> and lines of code, turning zeros and ones into immersive and interactive web experiences.</p>
+                            <p class="text-justify text-home-2"> When I'm not creating beautiful web experiences, you can find me reading articles about web development or being carried away by the captivating melodies of music.
+                            Explore my portfolio to discover my web <a class="text-white" aria-label="Go to Projects Page" href="/projects">PROJECT</a> and experiences.
+                        Don't hesitate to <a class="text-white" aria-label="Go to Contact Page" href="/contact">CONTACT ME</a> if you'd like to know more about my work or to discuss exciting collaborations. Thank you for visiting !
+                            <!-- Texte de présentation -->
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-8">
-                <img src="{{ asset('build/images/dev.webp') }}" class="img-fluid">
+                
+                <!-- Conteneur pour l'image et le bouton CV -->
+                <div class="d-flex flex-column align-items-center mt-4 text-center">
+                    
+                    
+                    <!-- Bouton de téléchargement du CV -->
+                    <a href="{{ path('telecharger_cv') }}" target="_blank">
+                        <button class="btn btn-primary mt-2">
+                            <i class="bi bi-download"></i> Curriculum Vitae
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </div>
+</div>
 
-    
-
-    {# Exemple dans un fichier Twig #}
-    <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <a href="{{ path('telecharger_cv') }}" target="_blank"><button class="btn"><i class="bi bi-download"></i> Curriculum vitae <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-          </svg></button></a>
-          </div>
-        </div>
-    </div>
-        
 {% endblock %}

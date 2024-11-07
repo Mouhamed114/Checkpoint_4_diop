@@ -1,0 +1,208 @@
+// Variables
+$primary-bg: #1b0927;
+$secondary-bg: #845EC2;
+$primary-color: #FFFFFFCC;
+$secondary-color: #e1e1e1;
+$tertiary-color: #c6c6c6;
+$text-light: whitesmoke;
+$text-dark: #c4c8ca96;
+$text-bg: #314a51;
+
+ /* Global Styles for About Page */
+ 
+//  .custom-container-about {
+//     position: relative;
+//     padding-left: 6%!important;
+//     // padding-right: 7% !important;
+// }
+// .row {
+//     margin-left: 7rem !important;
+//     // padding-right: 0px !important;
+// }
+@media (min-width: 992px) {
+    .ml-lg-8rem {
+        margin-left: 8rem;
+    }
+}
+
+.col-about {
+    padding-left: 0 !important;
+}
+// @media (min-width: 992px) { /* Pour les écrans larges (lg) et plus */
+//     .row {
+//         padding-left: 3rem !important;
+//         padding-right: 3rem !important;
+//     }
+// }
+
+// @media (min-width: 768px) {
+//     .row {
+//         padding-left: 100px !important;
+//     }
+// }
+.intro__text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $secondary-color;
+    margin-left: 12px;
+    // padding-top: 22px;
+}
+.intro_text_2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $secondary-color;
+    padding-left: 10px !important;
+    
+}
+.rotated-text-about {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 18rem; /* Taille de police par défaut */
+    color: $text-bg; 
+    // transform: rotate(90deg); /* Rotation du texte */
+    position: fixed; 
+    // bottom: 8%; /* Espace depuis le bas */
+    // left: 0; /* Collé à gauche */
+    // transform: translateY(0) rotate(90deg); /* Ajustement pour aligner à gauche */
+    z-index: -2; 
+    opacity: 0.2; /* Transparence légère */
+    height: 88vh; /* Prend 75% de la hauteur de l'écran */
+    display: flex;
+    align-items: flex-end; /* Alignement vertical */
+    font-weight: 900;
+    // justify-content: start; /* Alignement horizontal */
+}
+@media (max-width: 768px) {
+    .rotated-text-about {
+        display: none !important;
+    }
+}
+
+// .h3-about {
+//     font-size: 2rem;
+//     font-weight: 700;
+//     margin-bottom: 1.5rem;
+//     color: #e1e1e1;
+// }
+
+/* Timeline Styles */
+ul.timeline {
+    position: relative;
+    padding-left: 28px;
+    list-style: none;
+    padding-bottom: 44px;
+}
+
+ul.timeline::before {
+    content: " ";
+    background: #ffffff5e; /* Line color */
+    position: absolute;
+    left: 12px; /* Adjust the position so that the line is centered in relation to the circle */
+    top: 0;
+    width: 1px; /* Line thickness */
+    height: 100%;
+    z-index: 0; /* Place behind the list items */
+    top: 15px;
+    height: calc(100% - 86px); 
+}
+
+ul.timeline li {
+    position: relative;
+    margin: 8px 0 48px;
+    // padding-left: 20px;
+}
+
+ul.timeline li::before {
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid $secondary-color; /* Border for the circle */
+    left: -24px; /* Position the circle correctly */
+    top: 5px; /* Adjust based on the vertical alignment */
+    width: 17px;
+    height: 17px;
+    z-index: 1; /* Place above the line */
+    background: #180b2d;
+    border: 3px solid $primary-color;
+    // box-shadow: 0 0 0 4px #ffffff;
+}
+// ul.timeline li::after {
+//     content: "";
+//     position: absolute;
+//     border-radius: 50%;
+//     top: 8px; /* Position identique au cercle */
+//     left: -36px; /* Assure que le masque recouvre la zone du trait */
+//     width: 17px; /* Taille du masque pour couvrir le trait */
+//     height: 17px; /* Hauteur du masque */
+//     background-color: $primary-bg; /* Couleur de fond qui masque le trait (blanc) */
+//     z-index: 2; /* Masque le trait à l'intérieur du cercle */
+// }
+/* Dernier élément de la liste (le dernier li) */
+// ul.timeline li:last-child::before {
+//     margin-bottom: 0; /* Supprime l'espacement en bas du dernier cercle */
+// }
+
+/* Masque le trait sous le dernier cercle */
+// ul.timeline li:last-child::after {
+//     display: none; /* Désactive le trait vertical sous le dernier élément */
+// }
+
+/* Link and Paragraph Styles */
+ul.timeline li a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $secondary-color;
+    text-decoration: none;
+}
+
+ul.timeline li p {
+    color: $tertiary-color;
+    margin: 9.6px 0 16px;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+
+
+
+
+
+
+
+
+
+// .timeline {
+//     list-style: none;
+//     padding: 0;
+// }
+
+// .timeline > li {
+//     margin-bottom: 1.5rem;
+// }
+
+// .timeline a {
+//     font-weight: bold;
+//     color: #333;
+//     text-decoration: none;
+// }
+
+// .timeline .skills-list {
+//     list-style-type: disc; /* Les puces pour les compétences */
+//     margin-left: 20px; /* Décalage pour la sous-liste */
+//     color: #555;
+//     font-size: 0.95em;
+// }
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crée des colonnes adaptatives */
+    grid-auto-rows: auto;
+    column-gap: 0px; /* Espacement entre les colonnes */
+    row-gap: 0px;    /* Espacement entre les lignes */
+    // max-height: calc(1.5em * 4 + 30px); /* Hauteur totale de 4 lignes max */
+    // overflow: hidden; /* Cache les lignes supplémentaires si elles dépassent */
+    padding-top: 10px;
+}
+
+// .skills-list li {
+//     margin: 5px 0;
+// }

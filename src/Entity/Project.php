@@ -19,6 +19,9 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $projectTitle = null;
+
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
@@ -55,6 +58,19 @@ class Project
 
         return $this;
     }
+
+    public function getProjectTitle(): ?string
+    {
+        return $this->projectTitle;
+    }
+
+    public function setProjectTitle(?string $projectTitle): static
+    {
+        $this->projectTitle = $projectTitle;
+
+        return $this;
+    }
+
 
     public function getDescription(): ?string
     {

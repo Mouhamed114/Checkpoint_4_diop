@@ -1,31 +1,214 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}About{% endblock %}
+{% block title %}About
+{% endblock %}
+{% block stylesheets %}
+	{{ parent()}}
+	{{ encore_entry_link_tags('about') }}
+{% endblock %}
 
+{% block javascripts %}
+	{{ parent()}}
+	{{ encore_entry_script_tags('about') }}
+{% endblock %}
 {% block body %}
-     
-    <div class="container mt-4">
-        <div class="d-flex align-items-center justify-content-center">
-            <h1 class="custom-title">About Me</h1>
+	<div class="rotated-text-about">
+		<p>
+				  
+						About Me.
+			
+					</p>
+	</div>
+
+     <div class="container my-5 px-3 px-lg-5">
+		<div class="row ml-lg-8rem">
+			<!-- Première colonne -->
+			<div class="col-md-10 col-about">
+				<div class="d-flex align-items-start justify-content-start pb-5">
+					<h1 class="intro__text">About Me.</h1>
+				</div>
+				{# <h3 class="h3-about">Who I am</h3> #}
+				<ul class="timeline">
+					<li class="mt-2">
+						<a href="#">Who I am 🤔</a>
+						<p>
+							My name is Mouhamed Diop and I'm a passionate full-stack developer. After obtaining my scientific baccalauréat and a degree in chemistry, I decided to follow my passion for computing and turned to web development.
+														                    I've had the opportunity to work on various projects involving different technologies, such as PHP with its Symfony framework, JavaScript, and Tailwind CSS... These experiences have enabled me to acquire solid expertise in the field of web development.
+														                    By working with major companies such as Emaus Connect and the "AFAC Île de la Réunion" association, I've been able to put my skills into practice and come up with effective solutions.
+														                    Today, I'm delighted when I'm writing lines of code, because it allows me to express my creativity and contribute to the realisation of concrete projects.
+						</p>
+					</li>
+					{# <li class="mt-2">
+						<a href="#">Educations 🎓</a>
+						<p>
+							<div> ➤ EPSI - Ecole d’ingénierie informatique ( Lyon )<br>09/24 - 09/25<br>Bachelor 3 DEVOPS - FULLSTACK<br></div>
+							<div> ➤ EPSI - Ecole d’ingénierie informatique ( Lyon )<br>09/24 - 09/25<br>Bachelor 3 DEVOPS - FULLSTACK<br></div>
+							<div></div>
+							<div></div>
+						</p>
+					</li> #}
+					<li class="mt-2">
+						<a href="#">Professional experience 💼</a>
+						<p>
+							As a web developer at @Wild Code School, I've had the opportunity to work on three exciting projects. Firstly, I contributed to the development of an immersive art gallery application for the AFAC association, showcasing works of art with a view to the 2023 European Heritage Days. This application also includes an admin interface dedicated to managing exhibitions and works of art. Next, I took part in the creation of a dynamic website for station networks, displaying trains and timetables departing from each station, while integrating user accounts and an admin interface for CRUD operations. Finally, I created a website for a fictitious professional photographer, with the aim of developing his reputation. The site, designed in HTML, CSS and JavaScript, aims to showcase the photographer's work and offer visitors a captivating experience.
+						</p>
+					</li>
+				</ul>
+				<div class="d-flex align-items-start justify-content-start pb-3">
+    <h1 class="intro_text_2">Skills.</h1>
+</div>
+<ul class="timeline">
+    <li class="mt-2">
+        <a href="#">Front-end Development 🎨</a>
+        <div class="skills-list">
+            <p>HTML </p>
+            <p>CSS Preprocessors (Sass)</p>
+            <p>Tailwind CSS/Bootstrap</p>
+            <p>JavaScript (React.js in progress) </p>
+			<p>Responsive Design</p>
         </div>
-    </div>
-    <div class="container mt-5 custom-container-about">
-        <div class="d-flex flex-column">
-            <div class="p-title p-3 mb-3">
-                <div class="circle"></div><h3 class="h3-about">Who I am</h3>
-                <p class="text-justify text-about">My name is Mouhamed Diop and I'm a passionate full-stack developer. After obtaining my scientific baccalauréat and a degree in chemistry, I decided to follow my passion for computing and turned to web development.
-                    I've had the opportunity to work on various projects involving different technologies, such as PHP with its Symfony framework, JavaScript, and Tailwind CSS... These experiences have enabled me to acquire solid expertise in the field of web development.
-                    By working with major companies such as Emaus Connect and the AFAC Île de la Réunion association, I've been able to put my skills into practice and come up with effective solutions.
-                    Today, I'm delighted when I'm writing lines of code, because it allows me to express my creativity and contribute to the realisation of concrete projects.</p>
-            </div>
-            <div class="p-title p-3 mb-3">
-                <div class="circle"></div><h3 class="h3-about">Educations</h3>
-                <p class="text-justify text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu eu venenatis consectetur. Aliquam volutpat, nibh ac pulvinar aliquet, tellus sem scelerisque justo, vitae consequat lorem dolor at justo. Fusce vel felis sit amet nisl tincidunt congue vitae non lorem. Quisque et tortor ultrices, cursus nunc id, finibus mauris. Sed maximus, elit id malesuada tincidunt, felis velit hendrerit velit, in tristique urna diam nec ex. Sed eget posuere lacus. Sed hendrerit, justo at.</p>
-            </div>
-            <div class="p-title p-3">
-                <div class="circle"></div> <h3 class="h3-about">Professional experience</h3>
-                <p class="text-justify text-about">As a web developer at @Wild Code School, I've had the opportunity to work on three exciting projects. Firstly, I contributed to the development of an immersive art gallery application for the AFAC association, showcasing works of art with a view to the 2023 European Heritage Days. This application also includes an admin interface dedicated to managing exhibitions and works of art. Next, I took part in the creation of a dynamic website for station networks, displaying trains and timetables departing from each station, while integrating user accounts and an admin interface for CRUD operations. Finally, I created a website for a fictitious professional photographer, with the aim of developing his reputation. The site, designed in HTML, CSS and JavaScript, aims to showcase the photographer's work and offer visitors a captivating experience.</p>
-            </div>
+    </li>
+    <li class="mt-2">
+        <a href="#">Back-end Development 🧩</a>
+        <div class="skills-list">
+            <p>Php/Symfony</p>
+            <p>Python/Django, Flask</p>			
+            <p>Java (Spring Boot)</p>
+            <p>MVC Architecture</p>
+            <p>Web APIs</p>
+            <p>WebSockets (in progress)</p>
+            <p>JavaScript/TypeScript (Node.js in progress)</p>
         </div>
-    </div>
+    </li>
+    <li class="mt-2">
+        <a href="#">Databases and Data Management 🗄️</a>
+        <div class="skills-list">
+            <p>MySQL</p>
+            <p>NoSQL</p>			
+            <p>SQLite</p>
+            <p>MongoDB (in progress)</p>
+        </div>
+    </li>
+    <li class="mt-2">
+        <a href="#">DevOps and Infrastructure 🛠️</a>
+        <div class="skills-list">
+            <p>Linux (Debian/Ubuntu servers)</p>
+            {# <p>Web Servers: Apache</p>			 #}
+            <p>Docker</p>
+            <p>Kubernetes (in progress)</p>
+            <p>Jenkins, GitLab CI/CD (in progress)</p>
+        </div>
+    </li>
+    <li class="mt-2">
+        <a href="#">Security and Best Practices 🔒</a>
+        <div class="skills-list">
+            <p>OWASP (SQL Injection, XSS, CSRF)/Regex</p>
+            <p>Unit and Integration Testing</p>			
+            <p>Code Review</p>
+            <p>DRY (Don’t Repeat Yourself)</p>
+            <p>SOLID Principles</p>
+        </div>
+    </li>
+    <li class="mt-2">
+        <a href="#">Project Management and Collaboration 📈</a>
+        <div class="skills-list">
+            <p>Git (GitHub, GitLab)</p>
+            <p>Agile/Scrum Methodology</p>			
+            <p>Trello</p>
+            <p>Application Documentation (READMEs)</p>
+        </div>
+    </li>
+	<li class="mt-2">
+        <a href="#">NoCode / LowCode 🖥️</a>
+        <div class="skills-list">
+            <p>Ksaar</p>
+            <p>Airtable (in progress)</p>			
+        </div>
+    </li>
+    <li class="mt-2">
+        <a href="#">Soft Skills 🧠</a>
+        <div class="skills-list">
+            <p>Autonomy</p>
+            <p>Initiative</p>			
+            <p>Leadership</p>
+            <p>Customer Service</p>
+            <p>Teamwork</p>
+        </div>
+    </li>
+    <li class="mt-2">
+        <a href="#">Activities 🔄</a>
+        <div class="skills-list">
+            <p>Sports (Soccer, Running, Swimming)</p>
+            <p>Travel (Senegal, Morocco, Spain, Italy)</p>			
+            <p>Volunteer - Les Restos du Coeur for 3 years</p>
+        </div>
+    </li>
+</ul>
+
+				<div class="d-flex align-items-start justify-content-start pb-3">
+					<h1 class="intro_text_2">My Reads.</h1>
+				</div>
+				<ul class="timeline">
+					<li class="mt-2">
+						<a href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/" target="_blank">Data Structure And Algorithm. Udemy</a>
+						<p>
+							Many developers who are "self taught", feel that one of the main disadvantages they face compared to college educated graduates in computer science is the fact that they don't have knowledge about algorithms, data structures and the notorious Big-O Notation
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#" target="_blank">learn to program in java/ 3rd edition.Cyrille Herby</a>
+						<p>
+							learn the basics of java/OOP/graphical interfaces/database interactions.
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="https://www.udemy.com/course/learning-to-learn-efficient-learning-zero-to-mastery/" target="_blank">Learning to Learn [Efficient Learning] udemy</a>
+						<p>
+							Improve memory & productivity using the skills of the world's top performers and learning strategies proven by research.
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="#">Learning Something Great 😉</a>
+						<p>
+							We continue learning everyday.
+						</p>
+					</li>
+				</ul>
+				<div class="d-flex align-items-start justify-content-start pb-3">
+					<h1 class="intro_text_2">My Playlist..</h1>
+				</div>
+				<ul class="timeline">
+					<li class="mt-2">
+						<a href="https://open.spotify.com/playlist/37i9dQZF1DWVuV87wUBNwc" target="_blank">Currenthits.spotify</a>
+						<p>
+							This is an intensive, energizing songs list that helps me through the day and inspires generate breakthrough ideas.</p>
+					</li>
+					<li class="mt-2">
+						<a href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS" target="_blank">Chill Lofi Study Beats</a>
+						<p>
+							The perfect study beats, twenty four seven. with over 600 SONGS
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="https://open.spotify.com/playlist/3YJe2nxntF82Ge0yZglxSr" target="_blank">Mellow Drive Spotify</a>
+						<p>
+							Easy listening for pleasant drive
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="https://open.spotify.com/playlist/4QhaSl0FyfC2yfGmdhr6mN" target="_blank">Rap US Spotify</a>
+						<p>
+							One of the finest rap in US.
+						</p>
+					</li>
+					<li class="mt-2">
+						<a href="https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=wF0gpf3RRa-2oT1GYTBQ_w&nd=1&dlsi=5c620fbcbc7e48d7" target="_blank">Mood Booster. Spotify</a>
+						<p>
+							Get happy with today's dose of feel-good songs!
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 {% endblock %}

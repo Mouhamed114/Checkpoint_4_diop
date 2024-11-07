@@ -12,20 +12,57 @@ import './styles/app.scss';
 import 'bootstrap';
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const textElement = document.getElementById("animationText");
-    const text = "I'M DIOP MOUHAMED";
-    let index = 0;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const textElement = document.getElementById("animationText");
+//     const text = "Hi, I'am Mouhamed 👋";
+//     let index = 0;
 
-    function typeWriter() {
-        textElement.textContent += text.charAt(index);
-        index++;
-        if (index < text.length) {
-            setTimeout(typeWriter, 100);
-        }
+//     function typeWriter() {
+//         textElement.textContent += text.charAt(index);
+//         index++;
+//         if (index < text.length) {
+//             setTimeout(typeWriter, 100);
+//         }
+//     }
+
+//     typeWriter();
+// });
+
+///////////////////////////////CURSOR//////////////////////////////
+document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.getElementById('cursor');
+    const circle = document.getElementById('circle');
+
+    // Variables pour stocker la dernière position de la souris
+    let lastMouseX = 0;
+    let lastMouseY = 0;
+
+    // Fonction pour mettre à jour la position du curseur et du cercle
+    function updateCursorPosition(x, y) {
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+        
+        circle.style.left = (x - 25) + 'px'; // Centrer le cercle autour du curseur
+        circle.style.top = (y - 25) + 'px';
     }
 
-    typeWriter();
+    // Écouteur de mouvement de la souris
+    document.addEventListener('mousemove', (e) => {
+        lastMouseX = e.clientX; // Enregistre la position actuelle de la souris
+        lastMouseY = e.clientY;
+        
+        updateCursorPosition(lastMouseX, lastMouseY); // Met à jour immédiatement la position
+    });
+
+    // Écouteur de défilement
+    document.addEventListener('scroll', () => {
+        // À chaque défilement, mettre à jour la position du cercle
+        updateCursorPosition(lastMouseX, lastMouseY);
+    });
 });
+
+
+
+
 
 

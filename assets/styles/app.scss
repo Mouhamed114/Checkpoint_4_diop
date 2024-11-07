@@ -1,222 +1,711 @@
-
-
 @import "~bootstrap/scss/bootstrap";  
 
-body{
-    background-color: #1b0927;
+// Variables
+$primary-bg: #1b0927;
+$secondary-bg: #845EC2;
+$primary-color: #FFFFFFCC;
+$secondary-color: #e1e1e1;
+$tertiary-color: #c6c6c6;
+$text-light: whitesmoke;
+$text-dark: #c4c8ca96;
+$text-bg: #314a51;
+
+// Styles
+html, body {
+    height: 100%; /* Assure que le html et le body occupent toute la hauteur */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    overflow-x: hidden; /* Évite le défilement horizontal */
+    font-family: 'Roboto', sans-serif !important;
+    line-height: 1.15;
 }
-.navbar, .footer {
-    background-color: transparent;
+
+.rotated-text-home {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 18rem; /* Taille de police par défaut */
+    color: $text-bg; 
+    // transform: rotate(90deg); /* Rotation du texte */
+    position: fixed; 
+    // bottom: 8%; /* Espace depuis le bas */
+    // left: 0; /* Collé à gauche */
+    // transform: translateY(0) rotate(90deg); /* Ajustement pour aligner à gauche */
+    z-index: -2; 
+    opacity: 0.2; /* Transparence légère */
+    height: 88vh; /* Prend 75% de la hauteur de l'écran */
+    display: flex;
+    align-items: flex-end; /* Alignement vertical */
+    font-weight: 900;
+    // justify-content: start; /* Alignement horizontal */
 }
-.navbar{
-    padding: 12px;
-    margin-bottom: 4em;
+@media (max-width: 768px) {
+    .rotated-text-home {
+        display: none !important;
+    }
 }
 
 .text-white{
-    font-weight: 800;
-    font-size: large;
+    font-weight: 600;
+}
+.custom-presentation a {
+    text-decoration: none; /* Enlève le soulignement */
+}
+/* Ajuster la taille du texte pour les écrans plus petits */
+
+// .img-home{
+//     max-width: 30%;
+//     height: auto;
+// }
+
+body {
+    /* Fond blanc de base */
+    background: linear-gradient(
+        to bottom right, /* Direction du dégradé */
+        yellow -550%,       /* Couleur jaune en haut à gauche */
+        #031120 30%,     /* Transition vers la couleur principale (30% du chemin) */
+        #061425 60%,     /* Couleur principale jusqu’à 70% */
+        yellow 550%      /* Couleur jaune en bas à droite */
+    );;
+    
+    /* S'assurer que l'élément occupe tout l'espace visible */
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
 }
 
-.iconsvg{
-    color: whitesmoke;
+body::before {
+    /* Le pseudo-élément ::before qui génère les carreaux */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: rgba(113, 113, 113, 0.07);
+    transition: 0.5s linear;
+
+       /* Les carreaux avec des lignes verticales et horizontales */
+background: 
+/* Lignes horizontales */
+linear-gradient(currentcolor 1px, transparent 1px) 0% 0% / 94px 90px,
+/* Lignes verticales */
+linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
+
+    
+    /* S'assurer que le pseudo-élément est en arrière-plan */
+    z-index: -1;
 }
-.icon-svg{
-    color: black;
-    font-size: 16px;
+
+////////// TITLE ANIMATION  ///////////////////////////
+.glitch-container {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5em;
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 8px;
 }
-.logo-navbar{
-    height: 50px;
+
+.glitch-text {
+    position: relative;
+    color: inherit;
+    padding: 0;
+    background: none 0 80% / 100% 0.3em no-repeat;
 }
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch-text::before {
+    color: #ff69b4;
+    left: 2px;
+    animation: 15s linear 0s infinite alternate-reverse none running glitch-before;
+    text-shadow: rgb(0, 255, 255) -1px 0;
+}
+
+.glitch-text::after {
+    
+    left: -2px;
+   
+    animation: 3s linear 0s infinite alternate-reverse none running glitch-after;
+    text-shadow: rgb(255, 105, 180) 3px 0px;
+}
+
+@keyframes glitch-before {
+    
+    0% {
+        clip-path: inset(76% 0px 21%);
+    }
+    
+    5% {
+        clip-path: inset(54% 0px 7%);
+    }
+    
+    10% {
+        clip-path: inset(55% 0px 29%);
+    }
+    
+    15% {
+        clip-path: inset(89% 0px 3%);
+    }
+    
+    20% {
+        clip-path: inset(33% 0px 40%);
+    }
+    
+    25% {
+        clip-path: inset(17% 0px 56%);
+    }
+    
+    30% {
+        clip-path: inset(37% 0px 51%);
+    }
+    
+    35% {
+        clip-path: inset(38% 0px 19%);
+    }
+   
+    40% {
+        clip-path: inset(93% 0px 4%);
+    }
+   
+    45% {
+        clip-path: inset(44% 0px 14%);
+    }
+    
+    50% {
+        clip-path: inset(53% 0px 26%);
+    }
+   
+    55% {
+        clip-path: inset(67% 0px 11%);
+    }
+    
+    60% {
+        clip-path: inset(85% 0px 13%);
+    }
+    
+    65% {
+        clip-path: inset(27% 0px 37%);
+    }
+    
+    70% {
+        clip-path: inset(87% 0px 4%);
+    }
+   
+    75% {
+        clip-path: inset(10% 0px 8%);
+    }
+    
+    80% {
+        clip-path: inset(51% 0px 27%);
+    }
+    
+    85% {
+        clip-path: inset(10% 0px 60%);
+    }
+    
+    90% {
+        clip-path: inset(83% 0px 3%);
+    }
+    
+    95% {
+        clip-path: inset(23% 0px 55%);
+    }
+    
+    100% {
+        clip-path: inset(1% 0px 81%);
+    }
+    
+}
+
+@keyframes glitch-after {
+    // 0% { clip: rect(10px, 9999px, 10px, 0); transform: translate(2px, 2px); }
+    // 50% { clip: rect(5px, 9999px, 20px, 0); transform: translate(-2px, -1px); }
+    // 100% { clip: rect(20px, 9999px, 10px, 0); transform: translate(1px, 1px); }
+    0% {
+        clip-path: inset(29% 0px 25%);
+    }
+    
+    5% {
+        clip-path: inset(9% 0px 38%);
+    }
+    
+    10% {
+        clip-path: inset(96% 0px 1%);
+    }
+    
+    15% {
+         clip-path: inset(75% 0px 23%); 
+    }
+    
+    20% {
+         clip-path: inset(46% 0px 50%); 
+    }
+    
+    25% {
+        clip-path: inset(3% 0px 46%); 
+    }
+    
+    30% {
+         clip-path: inset(82% 0px 2%); 
+    }
+    
+    35% {
+        clip-path: inset(88% 0px 1%); 
+    }
+    
+    40% {
+         clip-path: inset(91% 0px 8%); 
+    }
+   
+    45% {
+         clip-path: inset(96% 0px 2%); 
+    }
+   
+    50% {
+         clip-path: inset(59% 0px 38%); 
+    }
+    
+    55% {
+         clip-path: inset(41% 0px 53%); 
+    }
+    
+    60% {
+         clip-path: inset(21% 0px 47%); 
+    }
+    
+    65% {
+         clip-path: inset(89% 0px 4%); 
+    }
+    
+    70% {
+        clip-path: inset(1% 0px 95%); 
+    }
+    
+    75% {
+         clip-path: inset(86% 0px 4%); 
+    }
+    
+    80% {
+        clip-path: inset(95% 0px 5%); 
+    }
+    
+    85% {
+         clip-path: inset(54% 0px 36%); 
+    }
+    
+    90% {
+         clip-path: inset(70% 0px 27%); 
+    }
+    
+    95% {
+         clip-path: inset(6% 0px 16%); 
+    }
+    
+    100% {
+         clip-path: inset(95% 0px 2%); 
+    }
+     
+}
+
+
+
+
+////////// END TITLE ANIMATION ////////////////////
+
+
+.text-home{
+    color: $tertiary-color;
+    margin-top: 2rem;
+    line-height: 2.3;
+  }
+  .text-home-2{
+    color: $tertiary-color;
+    margin-top: 1rem;
+    line-height: 2.3;
+  }
+.col-home {
+    padding-left: 0 56px;
+}
+@media (min-width: 992px) {
+    .ml-lg-8rem {
+        margin-left: 8rem;
+    }
+    
+}
+@media (max-width: 768px) {
+    .intro_text {
+        font-size: 4vw;
+    }
+    // .text-home{
+    //     margin-top: 2rem;
+    //   }
+}
+
+.navbar, .footer {
+    background-color: transparent !important;
+}
+
+/////////////////// Navbar ///////////////
+.navbar{
+    padding: 60px 0px;
+    margin:0 14em !important;
+    transition: 0.5s;
+    display: contents;
+}
+.circle {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 20%;
+    background-color: $secondary-bg;
+    transform: translateX(-50%);
+}
+.container-fluid {
+    padding: 50px 220px; // Padding pour desktop
+}
+
+// Media query pour les écrans mobiles (moins de 768px)
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 12px 15px; // Padding pour mobile
+    }
+
+    .navbar {
+        padding: 12px 0; // Padding pour la navbar sur mobile (ou ajustez selon besoin)
+    }
+}
+@media (max-width: 768px) {
+    .navbar-brand svg {
+        width: 30px; /* Réduction pour les tablettes et petits écrans */
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand svg {
+        width: 20px; /* Réduction supplémentaire pour les écrans mobiles */
+        height: 30px;
+    }
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='whitesmoke' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: $primary-color;
+    // padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+    // font-family: 'Roboto', sans-serif !important;
+    font-size: 20px;
+    padding: 8px 15px !important;
+}
+
+/* Pseudo-élément pour ajouter la ligne de soulignement sous chaque lien texte, mais PAS les SVG */
+.nav-link span::after {
+    content: "";
+    position: absolute;
+    width: 0;  /* Initialement invisible */
+    height: 1px;
+    bottom: 0;
+    left: 50%;  /* Ligne commence au milieu */
+    background-color: $primary-color; /* Couleur de la ligne de soulignement */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Lorsque le texte du lien (span) est survolé, la ligne s'étend */
+.nav-link span:hover::after {
+    width: 100%;  /* Réduire la largeur à 50% */
+    left: 0%;  /* Centrer la ligne */
+}
+
+/* Désactiver toute animation ou effet de survol sur le SVG */
+.nav-link svg:hover {
+    fill: currentColor; /* Assurer que la couleur reste inchangée au survol */
+    transition: none; /* Supprimer les transitions sur le SVG */
+}
+
+///////////////////////////// END NAVBAR ////////////////////////////////////
+
+
+//////////////   fOOTER   ///////////
+/// 
+.footer-link {
+    text-decoration: none;
+    color: inherit; /* Conserve la couleur du texte par défaut */
+    bottom: -2px !important;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    background-color: #3498db !important; /* Remplacez par la couleur bleue */
+}
+
+.social-media svg {
+    transition: none;  /* Aucune animation ou effet de transition */
+    fill: $tertiary-color;
+    transition: transform 0.3s ease;
+}
+.footer p{
+    color: $secondary-color;
+}
+// .footer{
+//     z-index: 1000;
+// }
+@keyframes move-arrow {
+    0% {
+        transform: translateX(0); /* Position initiale */
+    }
+    50% {
+        transform: translateX(20px); /* Déplacement de 10px vers la droite */
+    }
+    100% {
+        transform: translateX(0); /* Retour à la position initiale */
+    }
+}
+.footer svg {
+    fill: $tertiary-color;
+    animation: move-arrow 1s infinite ease-in-out; /* Animation infinie */
+}
+
+.text-start {
+    margin-left: 11rem !important;
+}
+
+/* Supprime le margin-left en dessous de 768px (taille typique des mobiles) */
+@media (max-width: 768px) {
+    .text-start {
+        margin-left: 0 !important;
+    }
+}
+
+
+  /* Effet de zoom au survol */
+  .social-media svg:hover {
+    transform: scale(1.2); /* Zoom à 120% */
+  }
+  /* Fixation en bas de l'écran en mobile uniquement */
+@media (max-width: 768px) {
+    .social-media {
+        position: fixed;
+        bottom: 0;
+        left: -9px;
+        right: 0;
+        // display: flex;
+        // justify-content: space-around;
+        background-color: #07121dd4; /* Fond semi-transparent */
+        // padding: 10px 0;
+        z-index: 1000; /* S'assurer que ça reste visible */
+    }
+    .social-media a {
+        flex: 1; /* Chaque icône occupe une part égale de l'espace */
+        text-align: center; /* Centre les icônes horizontalement */
+        padding: 10px; /* Padding autour des icônes */
+        margin: 0;
+    }
+}
+  ///////////////////////////// END FOOTER ////////////////////////////////////////////
+
+/////////////////// Textes COLOR///////////////////
+// .label-form{
+//     margin-bottom: 17px;
+//     color: $text-dark;
+//   }
+//   .text-contact{
+//     color: $text-dark;
+//   }
+
+//   .text-footer{
+//     color: $text-dark;
+//   }
+
+//   .text-about{
+//     color: $text-dark;
+//     font-weight: 500;
+//     font-size: larger;
+//   }
+  ////////////////////////////////////////////////////////
+//  .nav-link{
+//     font-size: 22px;
+//     padding: 8px 15px !important;
+    // }
 
 .containers {
     margin: 0 5%;
     width: auto !important;
 }
 
-.circle {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    border-radius: 20%;
-    background-color: #845EC2;
-    transform: translateX(-50%);
-}
+// .custom-title{
+//     font-size: 4.075vw;
+//     font-weight: 900;
+//     margin: 4rem 0rem 1.5rem;
+//     color: $text-light;
+// }
 
-.custom-container-about{
-    padding-left: 5%!important;
-    padding-right: 5% !important;
-}
+// .custom-presentation p{
+//     padding-left: 2em;
+//     margin-bottom: 0px;
+// }
 
-.custom-presentation p{
-    padding-left: 2em;
-    margin-bottom: 0px;
-}
+// .custom-border{
+//     border-left: 3px solid;
+//      margin-left: -2px;
+// }
 
-.custom-border{
-    border-left: 3px solid;
-     margin-left: -2px;
-}
-.custom-title{
-    font-size: 36px;
-    font-family: 'Kavoon';
-    color: aliceblue;
-    margin-bottom: 1em;
-}
+// .h3-about {
+//     display: inline-block;
+//      color: #e1e1e1;
+// }
 
-.h3-about {
-    display: inline-block;
-     color: #e1e1e1;
-}
+// .custom-container-about .p-title p {
+//     padding-left: 3%;
+//     border-left: 1px solid whitesmoke;
+//     height: 150%
+// }
+// .p-title {
+//     position: relative; /* Nécessaire pour que le pseudo-élément soit positionné par rapport à l'élément parent */
+//     padding-left: 3%;
+// }
 
-.custom-container-about .p-title p {
-    padding-left: 3%;
-    border-left: 2px solid black;
-}
+// .p-title::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     bottom: 0; /* Étendre la bordure sur toute la hauteur */
+//     left: 0;
+//     width: 1px; /* Largeur de la bordure */
+//     background-color: whitesmoke; /* Couleur de la bordure */
+//     height: 100%; /* Augmenter la longueur de la bordure, ici à 150% de l'élément */
+// }
 
- .form-textarea {
-    
-    height: 137px;
-//     padding-top: 1.6rem;
-//     padding-bottom: 1.6rem;
-//     line-height: 1.7;
-}
-.input-email{
-margin-top: 20px;
-}
-
-.custom-svg .center {
-    text-align: center;
-    margin-bottom: 4em;
-}
-
-
-.custom-svg  .icon-svg{
-    height: 50px;
-    width: 50px;
-
-}
-.facebook{
-    color: whitesmoke;
-
-}
-
-.twitter{
-    color: whitesmoke;
-
-}
-
-.instagram{
-    color: whitesmoke;
-
-}
-
-.linkdin{
-    color: whitesmoke;
-
-}
-
-
-.custom-svg a {
-    margin-right: 20%;
-    margin-bottom: 5%;
-    text-decoration: none !important;
-}
-
-.custom-svg .link-twitter, .custom-svg  .link-facebook {
-    margin-right: 20%;
-
-}
-
-.button-submit{
-    text-align: right;
-    padding-top: 3%;    
-}
-
-.custom-contact-rs{
-    border-bottom: 1px solid;
-    border-bottom-color: rgb(131 131 131);
-}
-.button{
-    font-family: 'kavoon';
-    background-color: #e1e1e1;
-    font-size: 1.1rem;
-    border: none;
-    padding: 5px 15px;
-    text-align: center;
-    border-radius: 4px;
-}
-p {
-    text-align: justify !important;
-  }
-
-.emailInput {
-    margin-top: 5%;
-}
-
-
-@media only screen and (max-width: 1200px) {
-    .custom-contact-rs .custom-svg a span{
-        display: none;
-    }
-
-    .custom-container-about .para_title p {
-        border-left: 1px solid black;
-    }
-    .custom-svg{
-        margin-left: 26px;
-        margin-top: 26px;
-    }
-  }
-
-
-  @media only screen and (max-width: 768px) {
-    .custom-border {
-        border-left: 0px solid;
-    }
-  }
-
-  .card-body{
-    min-height: 35em;
-  }
-  .label-form{
-    margin-bottom: 17px;
-    color: #c4c8ca96;
-  }
-  .text-contact{
-    color: #c4c8ca96;
-  }
-
-  .text-footer{
-    color: #c4c8ca96;
-  }
-  .text-home{
-    color: #c4c8ca96;
-  }
-  .text-about{
-    color: #c4c8ca96;
-    font-weight: 500;
-    font-size: larger;
-  }
-
- 
-//     footer {
-//         position: fixed;
-//         bottom: 0;
-//         left: 0;
-//         width: 100%;
+//  .form-textarea {
+//     height: 137px;
+// }
+// .input-email{
+// margin-top: 20px;
+// }
+// .custom-svg .center {
+//     text-align: center;
+//     margin-bottom: 4em;
+// }
+// .custom-svg  .icon-svg{
+//     height: 50px;
+//     width: 50px;
+// }
+// .custom-svg a {
+//     margin-right: 20%;
+//     margin-bottom: 5%;
+//     text-decoration: none !important;
+// }
+// .custom-svg .link-twitter, .custom-svg  .link-facebook {
+//     margin-right: 20%;
+// }
+// .button-submit{
+//     text-align: right;
+//     padding-top: 3%;    
+// }
+// .custom-contact-rs{
+//     border-bottom: 1px solid;
+//     border-bottom-color: rgb(131 131 131);
+// }
+// .button{
+//     // font-family: 'kavoon';
+//     background-color: #e1e1e1;
+//     font-size: 1.1rem;
+//     border: none;
+//     padding: 5px 15px;
+//     text-align: center;
+//     border-radius: 4px;
+// }
+// p {
+//     text-align: justify !important;
 //   }
 
-.btn {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 20px;
-  }
+// .emailInput {
+//     margin-top: 5%;
+// }
+//   .card-body{
+//     min-height: 35em;
+//   }
+//   .description-card-hover{
+//     position: absolute !important;
+//     bottom: 0 !important;
+//   }
+// .btn {
+//     background-color: DodgerBlue;
+//     border: none;
+//     color: white;
+//     padding: 12px 30px;
+//     cursor: pointer;
+//     font-size: 20px;
+//   }
   
-  /* Darker background on mouse-over */
-  .btn:hover {
-    background-color: rgb(174, 179, 193);
-  }
+//   /* Darker background on mouse-over */
+//   .btn:hover {
+//     background-color: rgb(174, 179, 193);
+//   }
+
+////////////////////// MEDIA QUERIES ///////////////
+// @media only screen and (max-width: 1200px) {
+//     .custom-contact-rs .custom-svg a span{
+//         display: none;
+//     }
+
+//     .custom-container-about .para_title p {
+//         border-left: 1px solid black;
+//     }
+//     .custom-svg{
+//         margin-left: 26px;
+//         margin-top: 26px;
+//     }
+//   }
+//   @media only screen and (max-width: 768px) {
+//     .custom-border {
+//         border-left: 0px solid;
+//     }
+//   }
+
+
+
+////////////////////////////CURSOR////////////////////////
+/* Style du petit point qui suit la souris */
+#cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none; /* Empêche l'élément d'interférer avec d'autres éléments interactifs */
+    z-index: 1000;
+}
+
+// /* Style du cercle qui suit la souris */
+#circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    // transition: transform 0.1s ease;
+}
+// #cursor, #circle {
+//     position: absolute;
+//     z-index: 9999; /* Un index plus élevé que celui de la sidebar */
+// }
+
+// .custom-error-email {
+//     color: #77d151 !important; /* Couleur spécifique pour l'erreur d'email */
+//     font-weight: bold !important;
+// }
+
