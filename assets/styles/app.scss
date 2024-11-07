@@ -3,7 +3,7 @@
 @import "~bootstrap/scss/bootstrap";  
 
 body{
-    background-color: #020a13 !important;
+    background-color: #1b0927;
 }
 .navbar, .footer {
     background-color: transparent;
@@ -55,6 +55,7 @@ body{
 
 .custom-border{
     border-left: 3px solid;
+     margin-left: -2px;
 }
 .custom-title{
     font-size: 36px;
@@ -196,4 +197,26 @@ p {
     color: #c4c8ca96;
     font-weight: 500;
     font-size: larger;
+  }
+
+ 
+//     footer {
+//         position: fixed;
+//         bottom: 0;
+//         left: 0;
+//         width: 100%;
+//   }
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgb(174, 179, 193);
   }

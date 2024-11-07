@@ -5,3 +5,7 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+telecharger_cv:
+    path: /telecharger-cv
+    controller: App\Controller\CVController::telechargerCV
