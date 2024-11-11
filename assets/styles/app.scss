@@ -22,13 +22,12 @@ html, body {
 
 body {
     background: linear-gradient(
-        to bottom right,  /* Direction du dégradé */
-        yellow,           /* Couleur jaune en haut à gauche */
-        #031120 50%,      /* Transition vers la couleur principale au milieu */
-        #061425 90%,      /* Couleur principale vers le bas */
-        yellow            /* Retour à la couleur jaune en bas à droite */
-    );
-    
+        to bottom right, /* Direction du dégradé */
+        yellow -550%,       /* Couleur jaune en haut à gauche */
+        #031120 30%,     /* Transition vers la couleur principale (30% du chemin) */
+        #061425 60%,     /* Couleur principale jusqu’à 70% */
+        yellow 550%      /* Couleur jaune en bas à droite */
+    ) !important;
     
     /* S'assurer que l'élément occupe tout l'espace visible */
     margin: 0;
