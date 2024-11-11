@@ -385,6 +385,9 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
 .container-fluid {
     padding: 50px 200px; // Padding pour desktop
 }
+.navbar-brand svg {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
 
 // Media query pour les écrans mobiles (moins de 768px)
 @media (max-width: 768px) {
