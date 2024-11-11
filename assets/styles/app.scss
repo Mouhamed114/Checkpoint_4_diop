@@ -69,7 +69,7 @@ body {
     /* S'assurer que l'élément occupe tout l'espace visible */
     margin: 0;
     position: relative;
-    // min-height: 100vh;
+    min-height: 100vh;
 }
 
 body::before {
@@ -376,7 +376,7 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
 // Media query pour les écrans mobiles (moins de 768px)
 @media (max-width: 768px) {
     .container-fluid {
-        padding: 12px 15px; // Padding pour mobile
+        padding: 20px 0px; // Padding pour mobile
     }
 
     .navbar {
@@ -387,17 +387,21 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
     .navbar-brand svg {
         width: 30px; /* Réduction pour les tablettes et petits écrans */
         height: 45px;
+        margin-left: 12px !important;
     }
 }
 
 @media (max-width: 480px) {
     .navbar-brand svg {
-        width: 20px; /* Réduction supplémentaire pour les écrans mobiles */
-        height: 30px;
+        width: 25px; /* Réduction supplémentaire pour les écrans mobiles */
+        height: 35px;
+        margin-left: 12px !important;
     }
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='whitesmoke' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 1.75em !important;
+    height: 1.75em !important;
 }
 .nav-link {
     position: relative;
