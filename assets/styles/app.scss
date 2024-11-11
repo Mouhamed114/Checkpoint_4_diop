@@ -20,21 +20,21 @@ html, body {
     line-height: 1.15;
 }
 
-body {
-    background: linear-gradient(
-        to bottom right, /* Direction du dégradé */
-        yellow -550%,       /* Couleur jaune en haut à gauche */
-        #031120 30%,     /* Transition vers la couleur principale (30% du chemin) */
-        #061425 60%,     /* Couleur principale jusqu’à 70% */
-        yellow 550%      /* Couleur jaune en bas à droite */
-    ) !important;
+// body {
+//     background: linear-gradient(
+//         to bottom right, /* Direction du dégradé */
+//         yellow -550%,       /* Couleur jaune en haut à gauche */
+//         #031120 30%,     /* Transition vers la couleur principale (30% du chemin) */
+//         #061425 60%,     /* Couleur principale jusqu’à 70% */
+//         yellow 550%      /* Couleur jaune en bas à droite */
+//     ) !important;
     
-    /* S'assurer que l'élément occupe tout l'espace visible */
-    margin: 0;
-    position: relative;
-    min-height: 100vh;
-    height: 100%;
-}
+//     /* S'assurer que l'élément occupe tout l'espace visible */
+//     margin: 0;
+//     position: relative;
+//     min-height: 100vh;
+//     height: 100%;
+// }
 
 body::before {
     /* Le pseudo-élément ::before qui génère les carreaux */
@@ -56,6 +56,20 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
 
     
     /* S'assurer que le pseudo-élément est en arrière-plan */
+    z-index: -1;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom right,
+        yellow -550%,
+        #031120 30%,
+        #061425 60%,
+        yellow 550%
+    );
     z-index: -1;
 }
 
