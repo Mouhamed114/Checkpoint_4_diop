@@ -1,6 +1,6 @@
 <section class="pb-5">
         <div class="container">
-            <div class="row align-items-center justify-content-start fade-in delay-6">
+            <div class="row align-items-center justify-content-start">
                 <div class="col-md-10 text-start ml-lg-8rem">
                   <footer class="footer">
                     <a href="
@@ -14,7 +14,7 @@
                             {{ path('app_home') }}
                         {% endif %}
                     " class="footer-link">
-                        <p class="mt-3 mb-5">
+                        <p class="mt-3 mb-5 fade-in delay-6">
                             {% if app.request.attributes.get('_route') == 'app_home' %}
                                 See More about Me
                             {% elseif app.request.attributes.get('_route') == 'app_about' %}
