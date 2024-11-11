@@ -36,8 +36,45 @@ html, body {
 //     height: 100%;
 // }
 
+// body::before {
+//     /* Le pseudo-élément ::before qui génère les carreaux */
+//     content: "";
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     color: rgba(113, 113, 113, 0.07);
+//     transition: 0.5s linear;
+
+//        /* Les carreaux avec des lignes verticales et horizontales */
+// background: 
+// /* Lignes horizontales */
+// linear-gradient(currentcolor 1px, transparent 1px) 0% 0% / 94px 90px,
+// /* Lignes verticales */
+// linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
+
+    
+//     /* S'assurer que le pseudo-élément est en arrière-plan */
+//     z-index: -1;
+//     content: "";
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     background: linear-gradient(
+//         to bottom right,
+//         yellow -550%,
+//         #031120 30%,
+//         #061425 60%,
+//         yellow 550%
+//     );
+//     z-index: -1;
+// }
+
 body::before {
-    /* Le pseudo-élément ::before qui génère les carreaux */
+    /* Le pseudo-élément ::before qui génère les carreaux et le dégradé */
     content: "";
     position: fixed;
     top: 0;
@@ -46,31 +83,21 @@ body::before {
     height: 100vh;
     color: rgba(113, 113, 113, 0.07);
     transition: 0.5s linear;
-
-       /* Les carreaux avec des lignes verticales et horizontales */
-background: 
-/* Lignes horizontales */
-linear-gradient(currentcolor 1px, transparent 1px) 0% 0% / 94px 90px,
-/* Lignes verticales */
-linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
-
-    
-    /* S'assurer que le pseudo-élément est en arrière-plan */
     z-index: -1;
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(
-        to bottom right,
-        yellow -550%,
-        #031120 30%,
-        #061425 60%,
-        yellow 550%
-    );
-    z-index: -1;
+
+    /* Combinaison des carreaux et du dégradé */
+    background: 
+        /* Carreaux */
+        linear-gradient(currentcolor 1px, transparent 1px) 0% 0% / 94px 90px,
+        linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px,
+        /* Dégradé en arrière-plan */
+        linear-gradient(
+            to bottom right,
+            yellow -550%,
+            #031120 30%,
+            #061425 60%,
+            yellow 550%
+        );
 }
 
 .rotated-text-home {
