@@ -100,11 +100,12 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
 
 .navbar .nav-link {
     color: inherit; /* Utiliser la couleur par défaut sans changement */
+    transition: none; /* Supprimer toute transition de couleur */
 }
 
-.navbar .nav-link:hover {
-    color: inherit; /* Empêche tout changement de couleur au survol */
-}
+// .navbar .nav-link:hover {
+//     color: inherit; /* Empêche tout changement de couleur au survol */
+// }
 
 
 ////////// TITLE ANIMATION  ///////////////////////////
