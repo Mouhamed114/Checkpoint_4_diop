@@ -69,7 +69,7 @@ body {
     /* S'assurer que l'élément occupe tout l'espace visible */
     margin: 0;
     position: relative;
-    min-height: 100vh;
+    // min-height: 100vh;
 }
 
 body::before {
