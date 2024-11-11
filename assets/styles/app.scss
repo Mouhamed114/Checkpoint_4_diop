@@ -131,16 +131,16 @@ body::before {
 
 .fade-in {
     opacity: 0;
-    animation: fade-in 0.8s forwards;
+    animation: fade-in 0.5s forwards; /* Durée de l'animation réduite à 0.5s */
 }
 
-/* Délais pour chaque élément */
-.fade-in.delay-1 { animation-delay: 0.5s; }
-.fade-in.delay-2 { animation-delay: 1s; }
-.fade-in.delay-3 { animation-delay: 1.5s; }
-.fade-in.delay-4 { animation-delay: 2s; }
-.fade-in.delay-5 { animation-delay: 2.5s; }
-.fade-in.delay-6 { animation-delay: 3s; }
+/* Délais pour chaque élément (réduits) */
+.fade-in.delay-1 { animation-delay: 0.3s; } /* Début plus rapide */
+.fade-in.delay-2 { animation-delay: 0.6s; }
+.fade-in.delay-3 { animation-delay: 0.9s; }
+.fade-in.delay-4 { animation-delay: 1.2s; }
+.fade-in.delay-5 { animation-delay: 1.5s; }
+.fade-in.delay-6 { animation-delay: 1.8s; }
 
 
 .text-white{
