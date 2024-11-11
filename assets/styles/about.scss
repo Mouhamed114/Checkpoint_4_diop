@@ -75,6 +75,13 @@ $text-bg: #314a51;
     .rotated-text-about {
         display: none !important;
     }
+    ul.timeline li p {
+        font-size: 12px !important;
+    }
+    ul.timeline li a {
+        font-size: 1.011em !important;
+        font-weight: 500 !important;
+    }
 }
 
 // .h3-about {
@@ -117,7 +124,7 @@ ul.timeline li::before {
     border-radius: 50%;
     border: 2px solid $secondary-color; /* Border for the circle */
     left: -24px; /* Position the circle correctly */
-    top: 5px; /* Adjust based on the vertical alignment */
+    top: 2px; /* Adjust based on the vertical alignment */
     width: 17px;
     height: 17px;
     z-index: 1; /* Place above the line */
@@ -148,8 +155,8 @@ ul.timeline li::before {
 
 /* Link and Paragraph Styles */
 ul.timeline li a {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.124em;
+    font-weight: 500;
     color: $secondary-color;
     text-decoration: none;
 }
@@ -157,9 +164,13 @@ ul.timeline li a {
 ul.timeline li p {
     color: $tertiary-color;
     margin: 9.6px 0 16px;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 2;
 }
+span{
+    font-size: 12px;
+}
+  
 
 
 
