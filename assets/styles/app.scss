@@ -507,7 +507,7 @@ body::before {
 /// 
 .footer-link {
     text-decoration: none;
-    color: inherit; /* Conserve la couleur du texte par défaut */
+    color: rgba(13, 110, 253); /* Conserve la couleur du texte par défaut */
     bottom: -2px !important;
 }
 
@@ -551,6 +551,9 @@ body::before {
 @media (max-width: 768px) {
     .text-start {
         margin-left: 0 !important;
+    }
+    .footer p{
+        font-size: 15px;
     }
 }
 
