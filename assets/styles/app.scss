@@ -46,6 +46,9 @@ html, body {
 .text-white{
     font-weight: 600;
 }
+// .text-white-nav{
+//     font-weight: 500 !important;
+// }
 .custom-presentation a {
     text-decoration: none; /* Enlève le soulignement */
 }
@@ -370,7 +373,7 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
     transform: translateX(-50%);
 }
 .container-fluid {
-    padding: 50px 220px; // Padding pour desktop
+    padding: 50px 200px; // Padding pour desktop
 }
 
 // Media query pour les écrans mobiles (moins de 768px)
@@ -410,7 +413,7 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
     // padding-bottom: 5px;
     transition: color 0.3s ease-in-out;
     // font-family: 'Roboto', sans-serif !important;
-    font-size: 20px;
+    font-size: 18px;
     padding: 8px 15px !important;
 }
 
