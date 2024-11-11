@@ -443,13 +443,15 @@ linear-gradient(to right, currentcolor 1px, transparent 1px) 0% 0% / 94px 90px;
 .nav-link span:hover::after {
     width: 100%;  /* Réduire la largeur à 50% */
     left: 0%;  /* Centrer la ligne */
-    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Désactiver toute animation ou effet de survol sur le SVG */
 .nav-link svg:hover {
     fill: currentColor; /* Assurer que la couleur reste inchangée au survol */
     transition: none; /* Supprimer les transitions sur le SVG */
+}
+.navbar .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 ///////////////////////////// END NAVBAR ////////////////////////////////////
