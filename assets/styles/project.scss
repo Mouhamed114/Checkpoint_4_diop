@@ -89,6 +89,7 @@ $text-bg: #314a51;
             padding:  5px 20px;
             border-radius: 5px;
         }
+
         .technos{
             background: rgb(105, 104, 105);
             padding: 4px 11px;
@@ -106,15 +107,30 @@ $text-bg: #314a51;
             position: relative;
             padding: 0;
           }
-        //   /* Pour les écrans de taille mobile */
-        //   @media (max-width: 768px) {
-        //     .description-card-hover {
-        //         display: block !important;
-        //         opacity: 1 !important; /* Assure une visibilité complète */
-        //         position: relative !important;
-        //         z-index: 100; /* Met la description au-dessus des autres éléments */
-        //     }
-        // }
+       /* Styles spécifiques pour mobile */
+       @media (max-width: 768px) {
+        /* Rendre visible tout le contenu au mobile avec le même effet de fond */
+        .card-text,
+        .card-title,
+        .list-inline-item,
+        .description-card-hover {
+            color: $primary-color;
+            visibility: visible;
+            opacity: 1; /* Afficher sans hover */
+            // background-color: rgba(0, 0, 0, 0.69); /* Même fond qu'au hover sur bureau */
+        }
+    
+        /* Appliquer le style de fond à l'ensemble de la carte pour mobile */
+        .description-card-hover {
+            opacity: 1; /* Toujours visible */
+            color: $primary-color;
+            background-color: rgba(0, 0, 0, 0.69); /* Fond similaire au hover sur bureau */
+        }
+        .technos{
+            background: rgb(105, 104, 105);
+            margin-bottom: 5px;
+        }
+    }
         
             ///////////////////////////////////// END CARD PROJECT  ////////////////////////////////////////////
 
