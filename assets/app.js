@@ -64,5 +64,14 @@ import 'bootstrap';
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach((el, index) => {
+        el.style.animation = 'none'; // Annule l'animation initiale
+        setTimeout(() => {
+            el.style.animation = ''; // Redémarre l'animation
+        }, 0);
+    });
+});
 
 
