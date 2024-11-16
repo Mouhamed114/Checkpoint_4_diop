@@ -843,4 +843,47 @@ body::before {
 }
 
 
+/* Bouton de fermeture par défaut : caché */
+.navbar-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.navbar-close svg {
+    fill: #fff; /* Couleur de la croix */
+}
+
+/* Affiche la croix uniquement en mobile et lorsque le menu est ouvert */
+@media (max-width: 768px) {
+    .navbar-close {
+        display: none; /* Caché par défaut */
+    }
+
+    .full-screen-menu.show ~ .navbar-close {
+        display: block; /* Affiché lorsque le menu est ouvert */
+    }
+}
+
+
+
+
+.navbar-toggler,
+.navbar-close {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.full-screen-menu.show ~ .navbar-toggler {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.full-screen-menu.show ~ .navbar-close {
+    opacity: 1;
+    visibility: visible;
+}
 

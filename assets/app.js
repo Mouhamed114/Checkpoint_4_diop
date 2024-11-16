@@ -85,3 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.toggle('menu-open', isOpen);
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarToggler = document.querySelector('.navbar-toggler'); // Bouton menu burger
+    const navbarClose = document.querySelector('.navbar-close'); // Bouton croix
+    const fullScreenMenu = document.querySelector('#navbar-default'); // Menu complet
+    const body = document.body;
+
+    // Ouvrir le menu
+    navbarToggler.addEventListener('click', () => {
+        const isOpen = fullScreenMenu.classList.toggle('show'); // Toggle de la classe 'show'
+        body.classList.toggle('menu-open', isOpen); // Empêche le scroll si ouvert
+    });
+
+    // Fermer le menu avec la croix
+    navbarClose.addEventListener('click', () => {
+        fullScreenMenu.classList.remove('show'); // Retire la classe 'show'
+        body.classList.remove('menu-open'); // Réactive le scroll
+    });
+});
