@@ -481,7 +481,6 @@ body::before {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='whitesmoke' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 //     width: 1.75em !important;
 //     height: 1.75em !important;
-color: $text-dark !important;
 }
 .nav-link {
     position: relative;
@@ -799,3 +798,41 @@ color: $text-dark !important;
 //     font-weight: bold !important;
 // }
 
+/* Masque tout en arrière-plan */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Menu en plein écran */
+.full-screen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Changez la couleur si nécessaire */
+    z-index: 1050; /* Assurez-vous qu'il est au-dessus des autres éléments */
+    display: none; /* Par défaut, caché */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-screen-menu.show {
+    display: flex;
+}
+
+.full-screen-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.full-screen-menu li {
+    margin: 1rem 0;
+}
+
+.full-screen-menu .nav-link {
+    font-size: 1.5rem;
+    color: #fff; /* Couleur du texte */
+    text-align: center;
+}
