@@ -16,7 +16,7 @@
         </button>
 
         <div class="collapse navbar-collapse full-screen-menu" id="navbar-default">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav">
                 {% if app.request.attributes.get('_route') != 'app_about' %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('app_about') }}"><span class="text-white-nav">About</span></a>
