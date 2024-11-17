@@ -849,26 +849,25 @@ body::before {
 /* Affiche la croix uniquement en mobile et lorsque le menu est ouvert */
 @media (max-width: 768px) {
     .navbar-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
-}
-
-.navbar-close svg {
-    fill: #fff; /* Couleur de la croix */
-}
-    .navbar-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
         display: none; /* Caché par défaut */
+    }
+
+    .navbar-close svg {
+        fill: #fff; /* Couleur de la croix */
     }
 
     .full-screen-menu.show ~ .navbar-close {
         display: block; /* Affiché lorsque le menu est ouvert */
     }
 }
+
 
 
 
