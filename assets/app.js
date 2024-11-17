@@ -89,30 +89,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navbarToggler = document.querySelector('.navbar-toggler'); // Bouton menu burger
-    const navbarClose = document.querySelector('.navbar-close'); // Bouton croix
-    const fullScreenMenu = document.querySelector('#navbar-default'); // Menu complet
-    const body = document.body;
+// document.addEventListener('DOMContentLoaded', () => {
+//     const navbarToggler = document.querySelector('.navbar-toggler'); // Bouton menu burger
+//     const navbarClose = document.querySelector('.navbar-close'); // Bouton croix
+//     const fullScreenMenu = document.querySelector('#navbar-default'); // Menu complet
+//     const body = document.body;
 
-    // Ouvrir le menu burger
-    navbarToggler.addEventListener('click', () => {
-        const isOpen = fullScreenMenu.classList.toggle('show'); // Toggle de la classe 'show'
-        body.classList.toggle('menu-open', isOpen); // Empêche le scroll si ouvert
+//     // Ouvrir le menu burger
+//     navbarToggler.addEventListener('click', () => {
+//         const isOpen = fullScreenMenu.classList.toggle('show'); // Toggle de la classe 'show'
+//         body.classList.toggle('menu-open', isOpen); // Empêche le scroll si ouvert
 
-        // Gestion de l'affichage de la croix
-        if (isOpen) {
-            navbarClose.style.display = 'block'; // Montre la croix
-        } else {
-            navbarClose.style.display = 'none'; // Cache la croix
-        }
-    });
+//         // Gestion de l'affichage de la croix
+//         if (isOpen) {
+//             navbarClose.style.display = 'block'; // Montre la croix
+//         } else {
+//             navbarClose.style.display = 'none'; // Cache la croix
+//         }
+//     });
 
-    // Fermer le menu avec la croix
-    navbarClose.addEventListener('click', () => {
-        fullScreenMenu.classList.remove('show'); // Retire la classe 'show'
-        body.classList.remove('menu-open'); // Réactive le scroll
-        navbarClose.style.display = 'none'; // Cache la croix
-    });
-});
+//     // Fermer le menu avec la croix
+//     navbarClose.addEventListener('click', () => {
+//         fullScreenMenu.classList.remove('show'); // Retire la classe 'show'
+//         body.classList.remove('menu-open'); // Réactive le scroll
+//         navbarClose.style.display = 'none'; // Cache la croix
+//     });
+// });
 
