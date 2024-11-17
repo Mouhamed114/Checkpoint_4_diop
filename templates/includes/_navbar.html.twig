@@ -18,31 +18,23 @@
                 </svg>
             </button>
         
-            <!-- Liens visibles uniquement sur mobile (menu burger) -->
+            <!-- Liens visibles sur mobile (menu burger) -->
             <ul class="navbar-nav ms-0 ms-lg-auto d-block d-lg-none">
-                {% if app.request.attributes.get('_route') != 'app_about' %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_about') }}">
-                            <span class="text-white-nav">About</span>
-                        </a>
-                    </li>
-                {% endif %}
-        
-                {% if app.request.attributes.get('_route') != 'app_project' %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_project') }}">
-                            <span class="text-white-nav">Projects</span>
-                        </a>
-                    </li>
-                {% endif %}
-        
-                {% if app.request.attributes.get('_route') != 'app_contact' %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_contact') }}">
-                            <span class="text-white-nav">Contact</span>
-                        </a>
-                    </li>
-                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_about') }}">
+                        <span class="text-white-nav">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_project') }}">
+                        <span class="text-white-nav">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_contact') }}">
+                        <span class="text-white-nav">Contact</span>
+                    </a>
+                </li>
         
                 <!-- Dark Mode Icon -->
                 <li class="nav-item">
