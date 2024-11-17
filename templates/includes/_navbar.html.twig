@@ -18,32 +18,34 @@
                 </svg>
             </button>
         
-            <!-- Tous les liens pour le menu burger -->
-            <ul class="navbar-nav ms-0 ms-lg-auto">
+            <!-- Liens visibles uniquement sur mobile (menu burger) -->
+            <ul class="navbar-nav ms-0 ms-lg-auto d-block d-lg-none">
+                {% if app.request.attributes.get('_route') != 'app_about' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_about') }}">
+                            <span class="text-white-nav">About</span>
+                        </a>
+                    </li>
+                {% endif %}
         
-                <!-- About Link: Visible sur mobile et desktop (d-block) -->
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link" href="{{ path('app_about') }}">
-                        <span class="text-white-nav">About</span>
-                    </a>
-                </li>
-                
-                <!-- Projects Link: Visible sur mobile et desktop (d-block) -->
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link" href="{{ path('app_project') }}">
-                        <span class="text-white-nav">Projects</span>
-                    </a>
-                </li>
-                
-                <!-- Contact Link: Visible sur mobile et desktop (d-block) -->
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link" href="{{ path('app_contact') }}">
-                        <span class="text-white-nav">Contact</span>
-                    </a>
-                </li>
+                {% if app.request.attributes.get('_route') != 'app_project' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_project') }}">
+                            <span class="text-white-nav">Projects</span>
+                        </a>
+                    </li>
+                {% endif %}
         
-                <!-- Dark Mode Icon: Visible sur mobile et desktop (d-block) -->
-                <li class="nav-item d-block d-lg-none">
+                {% if app.request.attributes.get('_route') != 'app_contact' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_contact') }}">
+                            <span class="text-white-nav">Contact</span>
+                        </a>
+                    </li>
+                {% endif %}
+        
+                <!-- Dark Mode Icon -->
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <svg class="text-white-nav" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
@@ -53,7 +55,7 @@
             </ul>
         
             <!-- Liens visibles uniquement sur desktop -->
-            <ul class="navbar-nav ms-lg-auto d-none d-lg-block">
+            <ul class="navbar-nav ms-lg-auto d-none d-lg-flex">
                 {% if app.request.attributes.get('_route') != 'app_about' %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_about') }}"><span class="text-white-nav">About</span></a>
@@ -72,7 +74,7 @@
                     </li>
                 {% endif %}
         
-                <!-- Dark Mode Icon: Visible uniquement sur desktop -->
+                <!-- Dark Mode Icon -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <svg class="text-white-nav" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
