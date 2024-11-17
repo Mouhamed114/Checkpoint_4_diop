@@ -20,6 +20,13 @@
         
             <!-- Liens visibles sur mobile (menu burger) -->
             <ul class="navbar-nav ms-0 ms-lg-auto d-block d-lg-none">
+                <!-- Home Link visible uniquement sur mobile -->
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link" href="{{ path('app_home') }}">
+                        <span class="text-white-nav">Home</span>
+                    </a>
+                </li>
+        
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('app_about') }}">
                         <span class="text-white-nav">About</span>
