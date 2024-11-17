@@ -872,18 +872,18 @@ body::before {
 
 
 
-.navbar-toggler,
-.navbar-close {
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
+// .navbar-toggler,
+// .navbar-close {
+//     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+// }
 
-.full-screen-menu.show ~ .navbar-toggler {
-    opacity: 0;
-    visibility: hidden;
-}
+// .full-screen-menu.show ~ .navbar-toggler {
+//     opacity: 0;
+//     visibility: hidden;
+// }
 
-.full-screen-menu.show ~ .navbar-close {
-    opacity: 1;
-    visibility: visible;
-}
+// .full-screen-menu.show ~ .navbar-close {
+//     opacity: 1;
+//     visibility: visible;
+// }
 
