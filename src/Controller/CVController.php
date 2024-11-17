@@ -10,7 +10,7 @@ class CVController extends AbstractController
 {
     public function telechargerCV(): Response
     {
-        $cvPath = $this->getParameter('kernel.project_dir') . '/public/cv/CV_DIOP_Mouhamed_JA.pdf';
+        $cvPath = $this->getParameter('kernel.project_dir') . '/public/cv/CV_S_DIOP_Mouhamed.pdf';
 
         return new BinaryFileResponse($cvPath);
     }
