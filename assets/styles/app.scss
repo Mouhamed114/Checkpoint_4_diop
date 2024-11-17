@@ -862,6 +862,10 @@ body::before {
     .navbar-close svg {
         fill: #fff; /* Couleur de la croix */
     }
+    .navbar-close.d-none {
+        display: block; /* Supprime d-none en mode mobile */
+    }
+
 
     .full-screen-menu.show ~ .navbar-close {
         display: block; /* Affiché lorsque le menu est ouvert */
