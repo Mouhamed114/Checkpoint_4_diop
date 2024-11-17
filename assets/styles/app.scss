@@ -863,7 +863,7 @@ body::before {
         fill: #fff; /* Couleur de la croix */
     }
     .navbar-close.d-none {
-        display: block; /* Supprime d-none en mode mobile */
+        display: block !important; /* Supprime d-none en mode mobile */
     }
 
 
