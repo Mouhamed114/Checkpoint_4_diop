@@ -800,77 +800,77 @@ body::before {
 
 /* Masque tout en arrière-plan */
 /* --- Comportement Mobile (max-width: 768px) --- */
-@media (max-width: 768px) {
-    /* Empêche le scroll en arrière-plan lorsque le menu est ouvert */
-    body.menu-open {
-        overflow: hidden;
-    }
+// @media (max-width: 768px) {
+//     /* Empêche le scroll en arrière-plan lorsque le menu est ouvert */
+//     body.menu-open {
+//         overflow: hidden;
+//     }
 
-    /* Le menu burger en plein écran */
-    .full-screen-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #000; /* Couleur de fond */
-        z-index: 1050; /* Assure la visibilité du menu */
-        display: none; /* Caché par défaut */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+//     /* Le menu burger en plein écran */
+//     .full-screen-menu {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         width: 100vw;
+//         height: 100vh;
+//         background-color: #000; /* Couleur de fond */
+//         z-index: 1050; /* Assure la visibilité du menu */
+//         display: none; /* Caché par défaut */
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//     }
 
-    /* Quand le menu est ouvert */
-    .full-screen-menu.show {
-        display: flex;
-    }
+//     /* Quand le menu est ouvert */
+//     .full-screen-menu.show {
+//         display: flex;
+//     }
 
-    .full-screen-menu ul {
-        list-style: none;
-        padding: 0;
-    }
+//     .full-screen-menu ul {
+//         list-style: none;
+//         padding: 0;
+//     }
 
-    .full-screen-menu li {
-        margin: 1rem 0;
-    }
+//     .full-screen-menu li {
+//         margin: 1rem 0;
+//     }
 
-    .full-screen-menu .nav-link {
-        font-size: 1.5rem;
-        color: #fff; /* Couleur du texte */
-        text-align: center;
-    }
-}
-
-
-/* Bouton de fermeture par défaut : caché */
+//     .full-screen-menu .nav-link {
+//         font-size: 1.5rem;
+//         color: #fff; /* Couleur du texte */
+//         text-align: center;
+//     }
+// }
 
 
-/* Affiche la croix uniquement en mobile et lorsque le menu est ouvert */
-@media (max-width: 768px) {
-    .navbar-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 1100;
-        display: none; /* Caché par défaut */
-    }
-
-    .navbar-close svg {
-        fill: #fff; /* Couleur de la croix */
-    }
-    .navbar-close.d-none {
-        display: block; /* Supprime d-none en mode mobile */
-    }
+// /* Bouton de fermeture par défaut : caché */
 
 
-    .full-screen-menu.show ~ .navbar-close {
-        display: block; /* Affiché lorsque le menu est ouvert */
-    }
-}
+// /* Affiche la croix uniquement en mobile et lorsque le menu est ouvert */
+// @media (max-width: 768px) {
+//     .navbar-close {
+//         position: absolute;
+//         top: 1rem;
+//         right: 1rem;
+//         background: none;
+//         border: none;
+//         cursor: pointer;
+//         z-index: 1100;
+//         display: none; /* Caché par défaut */
+//     }
+
+//     .navbar-close svg {
+//         fill: #fff; /* Couleur de la croix */
+//     }
+//     .navbar-close.d-none {
+//         display: block; /* Supprime d-none en mode mobile */
+//     }
+
+
+//     .full-screen-menu.show ~ .navbar-close {
+//         display: block; /* Affiché lorsque le menu est ouvert */
+//     }
+// }
 
 
 
