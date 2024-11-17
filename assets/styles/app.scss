@@ -829,6 +829,7 @@ body::before {
     .full-screen-menu ul {
         list-style: none;
         padding: 0;
+        margin-block-end: auto;
     }
 
     .full-screen-menu li {
@@ -869,7 +870,9 @@ body::before {
 
     .full-screen-menu.show ~ .navbar-close {
         display: block; /* Affiché lorsque le menu est ouvert */
+    padding: 1em;
     }
+
 }
 
 
