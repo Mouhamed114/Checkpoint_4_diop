@@ -75,16 +75,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const fullScreenMenu = document.querySelector('#navbar-default');
-    const body = document.body;
+// document.addEventListener('DOMContentLoaded', () => {
+//     const navbarToggler = document.querySelector('.navbar-toggler');
+//     const fullScreenMenu = document.querySelector('#navbar-default');
+//     const body = document.body;
 
-    navbarToggler.addEventListener('click', () => {
-        const isOpen = fullScreenMenu.classList.toggle('show');
-        body.classList.toggle('menu-open', isOpen);
-    });
-});
+//     navbarToggler.addEventListener('click', () => {
+//         const isOpen = fullScreenMenu.classList.toggle('show');
+//         body.classList.toggle('menu-open', isOpen);
+//     });
+// });
 
 
 
