@@ -865,12 +865,12 @@ body::before {
     }
     .navbar-close.d-none {
         display: block !important; /* Supprime d-none en mode mobile */
+        margin-top: 10px !important;
     }
 
 
     .full-screen-menu.show ~ .navbar-close {
         display: block; /* Affiché lorsque le menu est ouvert */
-    padding: 1em;
     }
 
 }
