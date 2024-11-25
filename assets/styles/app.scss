@@ -788,10 +788,10 @@ body::before {
     z-index: 999;
     // transition: transform 0.1s ease;
 }
-// #cursor, #circle {
-//     position: absolute;
-//     z-index: 9999; /* Un index plus élevé que celui de la sidebar */
-// }
+#cursor, #circle {
+    position: absolute;
+    z-index: 9999; /* Un index plus élevé que celui de la sidebar */
+}
 
 // .custom-error-email {
 //     color: #77d151 !important; /* Couleur spécifique pour l'erreur d'email */
