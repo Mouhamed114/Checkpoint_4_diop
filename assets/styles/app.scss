@@ -778,20 +778,20 @@ body::before {
 }
 
 // /* Style du cercle qui suit la souris */
-#circle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 999;
-    // transition: transform 0.1s ease;
-}
-#cursor, #circle {
-    position: absolute;
-    z-index: 9999; /* Un index plus élevé que celui de la sidebar */
-}
+// #circle {
+//     position: absolute;
+//     width: 50px;
+//     height: 50px;
+//     border: 2px solid rgba(255, 255, 255, 0.6);
+//     border-radius: 50%;
+//     pointer-events: none;
+//     z-index: 999;
+//     // transition: transform 0.1s ease;
+// }
+// #cursor, #circle {
+//     position: absolute;
+//     z-index: 9999; /* Un index plus élevé que celui de la sidebar */
+// }
 
 // .custom-error-email {
 //     color: #77d151 !important; /* Couleur spécifique pour l'erreur d'email */
